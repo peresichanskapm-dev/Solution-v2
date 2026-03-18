@@ -1,9 +1,22 @@
 .header {
+	position: relative;
 	height: px-to-vw(68, 1440);
-	padding-inline: px-to-vw(45, 1440);
+	padding-left: px-to-vw(45, 1440);
+	padding-right: px-to-vw(86, 1440);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+	transform: translateX(-0.5px);
+	background: #000;
 }
 
 .logo {
@@ -25,9 +38,9 @@
 
 .navItem {
 	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
+	font-size: px-to-vw(15, 1440);
 	font-weight: 300;
-	line-height: 1.2;
+	line-height: 1.21;
 	color: #000;
 	text-transform: lowercase;
 }
@@ -42,6 +55,10 @@
 	.header {
 		height: px-to-vw(50, 390);
 		padding-inline: px-to-vw(10, 390);
+	}
+
+	.header::before {
+		display: none;
 	}
 
 	.logo {
