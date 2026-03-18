@@ -1,104 +1,118 @@
 .stateIssue {
+	position: relative;
 	min-height: px-to-vw(1045, 1440);
-	padding: px-to-vw(109, 1440) px-to-vw(45, 1440) px-to-vw(60, 1440);
 	background: #dfddd3;
 	overflow: hidden;
 }
 
 .issueText {
+	position: absolute;
+	top: px-to-vw(109, 1440);
+	left: px-to-vw(536, 1440);
 	width: px-to-vw(318, 1440);
-	margin-left: auto;
+	z-index: 2;
 }
 
 .sectionTitle {
 	font-family: var(--font-tenor);
-	font-size: px-to-vw(60, 1440);
+	font-size: px-to-vw(40, 1440);
 	font-weight: 400;
-	line-height: 1.08;
-	letter-spacing: px-to-vw(-1.8, 1440);
+	line-height: 1.075;
+	letter-spacing: px-to-vw(-1.2, 1440);
 }
 
 .issueParagraph {
-	margin-top: px-to-vw(28, 1440);
+	margin-top: px-to-vw(25, 1440);
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
 	font-weight: 400;
-	line-height: 1.2;
+	line-height: 1.210227;
 	color: #1f1f1f;
+	text-align: left;
 }
 
 .issueDiagram {
-	position: relative;
+	position: absolute;
+	top: px-to-vw(424, 1440);
+	left: px-to-vw(414, 1440);
 	width: px-to-vw(561, 1440);
-	height: px-to-vw(561, 1440);
-	margin-top: px-to-vw(36, 1440);
-	margin-left: px-to-vw(370, 1440);
+	aspect-ratio: 900 / 925;
 }
 
-.issueOuterText,
-.issueRingImage {
-	object-fit: contain;
-}
-
-.issueInnerText {
+.issueLayer {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: px-to-vw(472, 1440);
-	height: px-to-vw(472, 1440);
 	transform: translate(-50%, -50%);
+	height: auto;
+}
+
+.issueOuterText {
+	width: 100%;
+	z-index: 4;
+}
+
+.issueRingImage {
+	width: 88.889%;
+	mix-blend-mode: multiply;
+	opacity: 0.9;
+	z-index: 3;
 }
 
 .issueInnerStroke {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: px-to-vw(256, 1440);
-	height: px-to-vw(256, 1440);
-	transform: translate(-50%, -50%);
+	width: 56.889%;
+	z-index: 2;
+}
+
+.issueInnerText {
+	width: 71.778%;
+	z-index: 5;
 }
 
 .issueCenterFill {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: px-to-vw(30, 1440);
-	height: px-to-vw(25, 1440);
-	transform: translate(-50%, -50%);
+	width: 6.667%;
+	z-index: 1;
 }
 
 .issueCenterStroke {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: px-to-vw(156, 1440);
-	height: px-to-vw(192, 1440);
-	transform: translate(-50%, -50%);
+	width: 33.444%;
+	z-index: 6;
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.stateIssue {
 		min-height: auto;
-		padding: px-to-vw(70, 390) px-to-vw(15, 390) px-to-vw(48, 390);
-	}
-
-	.sectionTitle {
-		font-size: px-to-vw(44, 390);
-		letter-spacing: px-to-vw(-1.1, 390);
+		padding: px-to-vw(74, 390) 0 px-to-vw(52, 390);
 	}
 
 	.issueText {
-		width: px-to-vw(250, 390);
+		position: relative;
+		top: auto;
+		left: auto;
+		width: px-to-vw(217, 390);
+		margin-left: px-to-vw(62, 390);
+	}
+
+	.sectionTitle {
+		font-size: px-to-vw(25, 390);
+		line-height: 1.08;
+		letter-spacing: px-to-vw(-0.75, 390);
 	}
 
 	.issueParagraph {
-		font-size: px-to-vw(20, 390);
 		margin-top: px-to-vw(20, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: 1.209743;
+		text-align: left;
 	}
 
 	.issueDiagram {
-		width: px-to-vw(292, 390);
-		height: px-to-vw(292, 390);
-		margin: px-to-vw(34, 390) auto 0;
+		position: relative;
+		top: auto;
+		left: 50%;
+		width: px-to-vw(363, 390);
+		aspect-ratio: 900 / 925;
+		margin-top: px-to-vw(14, 390);
+		transform: translateX(-50%);
 	}
 }
