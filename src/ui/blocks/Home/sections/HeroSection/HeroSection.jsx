@@ -9,7 +9,9 @@ export default function HeroSection() {
 				<div className={classes.heroCopy}>
 					<p className={classes.heroTitle}>State Shift Audio Programs by SOLUTION</p>
 					<p className={classes.heroSubtitle}>М’яке психо-духовне перезавантаження стану за 5-12 хвилин</p>
-					<div className={classes.heroChip}>Чому ми втрачаємо стан</div>
+					<button type="button" className={classes.heroButton}>
+						Спробувати
+					</button>
 				</div>
 				<p className={classes.heroTagLeft}>не релаксація.</p>
 				<p className={classes.heroTagRight}>не медитація.</p>
@@ -26,10 +28,7 @@ export default function HeroSection() {
 						className={classes.heroImage}
 					/>
 				</div>
-				<p className={classes.heroText}>
-					Аудіопрограми, що змінюють стан через тіло, увагу і сприйняття. Думай чистіше. Відчувай
-					глибше. Дій впевненіше.
-				</p>
+				<p className={classes.heroText}>Аудіопрограми, що змінюють стан через тіло, увагу і сприйняття. Думай чистіше. Відчувай глибше. Дій впевненіше.</p>
 			</div>
 		</section>
 	);

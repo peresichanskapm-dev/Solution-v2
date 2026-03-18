@@ -40,21 +40,30 @@
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
 	font-weight: 300;
-	line-height: 1.2;
+	line-height: 1.210227;
+	width: px-to-vw(260, 1440);
+	margin-inline: auto;
 }
 
-.heroChip {
+.heroButton {
 	margin-top: px-to-vw(109, 1440);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: px-to-vw(9, 1440) px-to-vw(24, 1440);
-	border-radius: px-to-vw(120, 1440);
-	border: 1px solid #000;
+	padding: px-to-vw(10, 1440) px-to-vw(15, 1440);
+	min-width: px-to-vw(136, 1440);
+	height: px-to-vw(39, 1440);
+	border-radius: px-to-vw(40, 1440);
+	border: 0;
+	background: #838366;
 	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 300;
+	font-size: px-to-vw(16, 1440);
+	font-weight: 400;
 	line-height: 1;
+	letter-spacing: px-to-vw(-0.32, 1440);
+	text-transform: uppercase;
+	color: #f5f5f5;
+	cursor: pointer;
 }
 
 .heroTagLeft,
@@ -62,9 +71,9 @@
 	position: absolute;
 	bottom: px-to-vw(9, 1440);
 	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
+	font-size: px-to-vw(16, 1440);
 	font-weight: 300;
-	line-height: 1.2;
+	line-height: 1.210227;
 }
 
 .heroTagLeft {
@@ -96,9 +105,9 @@
 	bottom: px-to-vw(26, 1440);
 	width: px-to-vw(268, 1440);
 	font-family: var(--font-inter);
-	font-size: px-to-vw(15, 1440);
+	font-size: px-to-vw(16, 1440);
 	font-weight: 300;
-	line-height: 1.26;
+	line-height: 1.210227;
 	color: #f5f5f5;
 }
 
@@ -125,12 +134,17 @@
 	.heroSubtitle {
 		margin-top: px-to-vw(10, 390);
 		font-size: px-to-vw(14, 390);
+		width: px-to-vw(181, 390);
 	}
 
-	.heroChip {
+	.heroButton {
 		margin-top: px-to-vw(28, 390);
-		font-size: px-to-vw(15, 390);
-		padding: px-to-vw(9, 390) px-to-vw(18, 390);
+		font-size: px-to-vw(16, 390);
+		padding: px-to-vw(10, 390) px-to-vw(15, 390);
+		min-width: px-to-vw(136, 390);
+		height: px-to-vw(39, 390);
+		border-radius: px-to-vw(40, 390);
+		letter-spacing: px-to-vw(-0.32, 390);
 	}
 
 	.heroTagLeft,
@@ -143,6 +157,7 @@
 		width: px-to-vw(171, 390);
 		left: px-to-vw(15, 390);
 		bottom: px-to-vw(15, 390);
-		font-size: px-to-vw(13, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: 1.210227;
 	}
 }
