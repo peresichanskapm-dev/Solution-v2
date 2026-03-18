@@ -1,0 +1,61 @@
+.header {
+	height: px-to-vw(68, 1440);
+	padding-inline: px-to-vw(45, 1440);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	position: relative;
+	width: px-to-vw(122, 1440);
+	height: px-to-vw(26, 1440);
+	display: block;
+}
+
+.logoImage {
+	object-fit: contain;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	gap: px-to-vw(94, 1440);
+}
+
+.navItem {
+	font-family: var(--font-inter);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 300;
+	line-height: 1.2;
+	color: #000;
+	text-transform: lowercase;
+}
+
+.menuButton {
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: $brakePointMobile) {
+	.header {
+		height: px-to-vw(50, 390);
+		padding-inline: px-to-vw(10, 390);
+	}
+
+	.logo {
+		width: px-to-vw(100, 390);
+		height: px-to-vw(21, 390);
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.menuButton {
+		display: flex;
+		width: px-to-vw(25, 390);
+		height: px-to-vw(10, 390);
+	}
+}

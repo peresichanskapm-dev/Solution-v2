@@ -107,6 +107,9 @@ html,
 body {
 	overscroll-behavior-x: none;
 	overscroll-behavior-y: none;
+	background: #d9d9d9;
+	color: #000;
+	font-family: var(--font-inter), sans-serif;
 }
 
 /* Lenis */
@@ -128,12 +131,3 @@ html {
 	overscroll-behavior: contain;
 }
 
-/* Fonts */
-
-h1 {
-	font-size: px-to-vw(100, 1920);
-}
-
-h2 {
-	font-size: px-to-vw(80, 1920);
-}

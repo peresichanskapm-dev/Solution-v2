@@ -1,0 +1,154 @@
+.tariffs {
+	min-height: px-to-vw(940, 1440);
+	padding: px-to-vw(64, 1440) px-to-vw(45, 1440) px-to-vw(58, 1440);
+	background: #dfddd3;
+}
+
+.tariffsHead {
+	text-align: center;
+}
+
+.tariffsTitle {
+	margin-inline: auto;
+	width: px-to-vw(520, 1440);
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(60, 1440);
+	font-weight: 400;
+	line-height: 1.08;
+	letter-spacing: px-to-vw(-1.8, 1440);
+}
+
+.tariffsLead {
+	margin: px-to-vw(22, 1440) auto 0;
+	width: px-to-vw(368, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 400;
+	line-height: 1.2;
+	color: #3a3a3a;
+}
+
+.tariffsMeta {
+	margin-top: px-to-vw(20, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(30, 1440);
+	font-weight: 400;
+	line-height: 1.2;
+	color: #838366;
+}
+
+.programsGrid {
+	margin-top: px-to-vw(50, 1440);
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: px-to-vw(16, 1440);
+}
+
+.programCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.programImageWrap {
+	position: relative;
+	width: px-to-vw(400, 1440);
+	aspect-ratio: 1 / 1;
+}
+
+.programImage {
+	object-fit: contain;
+}
+
+.programIndex {
+	margin-top: px-to-vw(-58, 1440);
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(40, 1440);
+	font-weight: 400;
+	line-height: 1;
+}
+
+.programName {
+	margin-top: px-to-vw(8, 1440);
+	width: px-to-vw(220, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+.programRingLabel {
+	margin-top: px-to-vw(8, 1440);
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(14, 1440);
+	letter-spacing: px-to-vw(2, 1440);
+	text-transform: uppercase;
+	color: #838366;
+}
+
+.tariffsPrice {
+	display: block;
+	margin: px-to-vw(34, 1440) auto 0;
+	padding: px-to-vw(12, 1440) px-to-vw(54, 1440);
+	border: 1px solid #838366;
+	border-radius: px-to-vw(120, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(30, 1440);
+	font-weight: 400;
+	line-height: 1.2;
+	color: #838366;
+}
+
+@media screen and (max-width: $brakePointMobile) {
+	.tariffs {
+		min-height: auto;
+		padding: px-to-vw(70, 390) px-to-vw(15, 390);
+	}
+
+	.tariffsTitle {
+		width: px-to-vw(320, 390);
+		font-size: px-to-vw(44, 390);
+	}
+
+	.tariffsLead {
+		width: px-to-vw(239, 390);
+		font-size: px-to-vw(20, 390);
+		margin-top: px-to-vw(18, 390);
+	}
+
+	.tariffsMeta {
+		font-size: px-to-vw(30, 390);
+		margin-top: px-to-vw(16, 390);
+	}
+
+	.programsGrid {
+		grid-template-columns: 1fr;
+		gap: px-to-vw(20, 390);
+		margin-top: px-to-vw(36, 390);
+	}
+
+	.programImageWrap {
+		width: px-to-vw(292, 390);
+	}
+
+	.programIndex {
+		font-size: px-to-vw(35, 390);
+		margin-top: px-to-vw(-36, 390);
+	}
+
+	.programName {
+		width: px-to-vw(239, 390);
+		font-size: px-to-vw(20, 390);
+	}
+
+	.programRingLabel {
+		font-size: px-to-vw(12, 390);
+	}
+
+	.tariffsPrice {
+		margin-top: px-to-vw(28, 390);
+		font-size: px-to-vw(30, 390);
+		padding: px-to-vw(12, 390) px-to-vw(50, 390);
+	}
+}

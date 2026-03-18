@@ -1,7 +1,9 @@
-export default function Home() {
+import Home from "@/ui/blocks/Home";
+
+export default function HomePage() {
 	return (
 		<main>
-			<h1>Home page</h1>
+			<Home />
 		</main>
 	);
 }

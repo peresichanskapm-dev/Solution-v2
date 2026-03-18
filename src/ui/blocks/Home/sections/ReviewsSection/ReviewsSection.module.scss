@@ -1,0 +1,83 @@
+.reviews {
+	position: relative;
+	min-height: px-to-vw(856, 1440);
+	overflow: hidden;
+}
+
+.reviewsBackground {
+	position: absolute;
+	inset: 0;
+}
+
+.reviewsBackgroundImage {
+	object-fit: cover;
+}
+
+.reviewsOverlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.45));
+}
+
+.reviewsCircle {
+	position: absolute;
+	left: 50%;
+	top: px-to-vw(80, 1440);
+	width: px-to-vw(695, 1440);
+	height: px-to-vw(696, 1440);
+	transform: translateX(-50%);
+}
+
+.reviewsCircleImage {
+	object-fit: contain;
+}
+
+.reviewsQuoteLeft,
+.reviewsQuoteRight {
+	position: absolute;
+	bottom: px-to-vw(30, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(30, 1440);
+	font-weight: 300;
+	line-height: 1.2;
+	color: #f5f5f5;
+}
+
+.reviewsQuoteLeft {
+	left: px-to-vw(45, 1440);
+	width: px-to-vw(145, 1440);
+}
+
+.reviewsQuoteRight {
+	right: px-to-vw(45, 1440);
+	width: px-to-vw(170, 1440);
+	text-align: right;
+}
+
+@media screen and (max-width: $brakePointMobile) {
+	.reviews {
+		min-height: px-to-vw(511, 390);
+	}
+
+	.reviewsCircle {
+		width: px-to-vw(370, 390);
+		height: px-to-vw(370, 390);
+		top: px-to-vw(70, 390);
+	}
+
+	.reviewsQuoteLeft,
+	.reviewsQuoteRight {
+		font-size: px-to-vw(20, 390);
+		bottom: px-to-vw(14, 390);
+	}
+
+	.reviewsQuoteLeft {
+		left: px-to-vw(15, 390);
+		width: px-to-vw(102, 390);
+	}
+
+	.reviewsQuoteRight {
+		right: px-to-vw(15, 390);
+		width: px-to-vw(127, 390);
+	}
+}
