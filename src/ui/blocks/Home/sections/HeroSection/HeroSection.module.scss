@@ -127,30 +127,34 @@
 	}
 
 	.heroTitle {
-		font-size: px-to-vw(30, 390);
-		letter-spacing: px-to-vw(-0.9, 390);
+		font-size: px-to-vw(25, 390);
+		line-height: 1.16;
+		letter-spacing: px-to-vw(-0.75, 390);
 	}
 
 	.heroSubtitle {
 		margin-top: px-to-vw(10, 390);
 		font-size: px-to-vw(14, 390);
-		width: px-to-vw(181, 390);
+		line-height: 1.209743;
+		width: px-to-vw(180, 390);
 	}
 
 	.heroButton {
 		margin-top: px-to-vw(28, 390);
-		font-size: px-to-vw(16, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: 1.210227;
 		padding: px-to-vw(10, 390) px-to-vw(15, 390);
-		min-width: px-to-vw(136, 390);
-		height: px-to-vw(39, 390);
+		min-width: px-to-vw(123, 390);
+		height: px-to-vw(37, 390);
 		border-radius: px-to-vw(40, 390);
-		letter-spacing: px-to-vw(-0.32, 390);
+		letter-spacing: px-to-vw(-0.28, 390);
 	}
 
 	.heroTagLeft,
 	.heroTagRight {
 		bottom: px-to-vw(6, 390);
-		font-size: px-to-vw(15, 390);
+		font-size: px-to-vw(12, 390);
+		line-height: 1.210227;
 	}
 
 	.heroText {
