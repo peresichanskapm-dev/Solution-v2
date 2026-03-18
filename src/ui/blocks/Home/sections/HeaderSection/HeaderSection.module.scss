@@ -49,12 +49,28 @@
 	display: none;
 	align-items: center;
 	justify-content: center;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.menuButton :global(img) {
+	transition: transform 0.25s ease;
+}
+
+.mobileMenu {
+	display: none;
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.header {
 		height: px-to-vw(50, 390);
 		padding-inline: px-to-vw(10, 390);
+	}
+
+	.headerOpen .menuButton :global(img) {
+		transform: rotate(90deg);
 	}
 
 	.header::before {
@@ -74,5 +90,65 @@
 		display: flex;
 		width: px-to-vw(25, 390);
 		height: px-to-vw(10, 390);
+		position: relative;
+		z-index: 81;
+	}
+
+	.mobileMenu {
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: #d9d9d9;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		opacity: 0;
+		transform: translateY(px-to-vw(-8, 390));
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+		z-index: 80;
+	}
+
+	.mobileMenu::before,
+	.mobileMenu::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background: #000;
+	}
+
+	.mobileMenu::before {
+		left: 0;
+	}
+
+	.mobileMenu::after {
+		right: 0;
+	}
+
+	.mobileMenuOpen {
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	.mobileNavItem {
+		display: block;
+		padding: px-to-vw(14, 390) px-to-vw(15, 390);
+		border-bottom: 1px solid #000;
+		font-family: var(--font-inter);
+		font-size: px-to-vw(15, 390);
+		font-weight: 300;
+		line-height: 1.21;
+		color: #000;
+		text-transform: lowercase;
+	}
+
+	.mobileNavItem:last-child {
+		border-bottom: 0;
 	}
 }
