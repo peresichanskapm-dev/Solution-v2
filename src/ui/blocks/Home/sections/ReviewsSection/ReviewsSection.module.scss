@@ -1,4 +1,4 @@
-.reviews {
+﻿.reviews {
 	position: relative;
 	min-height: px-to-vw(856, 1440);
 	overflow: hidden;
@@ -6,11 +6,19 @@
 
 .reviewsBackground {
 	position: absolute;
-	inset: 0;
+	left: 0;
+	top: 0;
+	width: px-to-vw(1388, 1440);
+	height: 100%;
 }
 
 .reviewsBackgroundImage {
-	object-fit: cover;
+	object-fit: fill;
+	width: 115.12% !important;
+	height: 127.54% !important;
+	max-width: none;
+	left: -11.68% !important;
+	top: -13.89% !important;
 }
 
 .reviewsOverlay {
@@ -26,6 +34,7 @@
 	width: px-to-vw(695, 1440);
 	height: px-to-vw(696, 1440);
 	transform: translateX(-50%);
+	z-index: 2;
 }
 
 .reviewsCircleImage {
@@ -35,28 +44,40 @@
 .reviewsQuoteLeft,
 .reviewsQuoteRight {
 	position: absolute;
-	bottom: px-to-vw(30, 1440);
+	top: px-to-vw(788, 1440);
 	font-family: var(--font-inter);
-	font-size: px-to-vw(30, 1440);
+	font-size: px-to-vw(16, 1440);
 	font-weight: 300;
-	line-height: 1.2;
+	line-height: normal;
 	color: #f5f5f5;
+	text-align: justify;
+	z-index: 3;
 }
 
 .reviewsQuoteLeft {
-	left: px-to-vw(45, 1440);
-	width: px-to-vw(145, 1440);
+	left: px-to-vw(70, 1440);
+	width: px-to-vw(117, 1440);
 }
 
 .reviewsQuoteRight {
-	right: px-to-vw(45, 1440);
-	width: px-to-vw(170, 1440);
-	text-align: right;
+	left: px-to-vw(1224, 1440);
+	width: px-to-vw(145, 1440);
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.reviews {
 		min-height: px-to-vw(511, 390);
+	}
+
+	.reviewsBackground {
+		width: px-to-vw(369, 390);
+	}
+
+	.reviewsBackgroundImage {
+		width: 316.48% !important;
+		height: 156.15% !important;
+		left: -88.63% !important;
+		top: -27.92% !important;
 	}
 
 	.reviewsCircle {
@@ -67,17 +88,17 @@
 
 	.reviewsQuoteLeft,
 	.reviewsQuoteRight {
-		font-size: px-to-vw(20, 390);
-		bottom: px-to-vw(14, 390);
+		top: px-to-vw(462, 390);
+		font-size: px-to-vw(14, 390);
 	}
 
 	.reviewsQuoteLeft {
-		left: px-to-vw(15, 390);
+		left: px-to-vw(25, 390);
 		width: px-to-vw(102, 390);
 	}
 
 	.reviewsQuoteRight {
-		right: px-to-vw(15, 390);
+		left: px-to-vw(237, 390);
 		width: px-to-vw(127, 390);
 	}
 }
