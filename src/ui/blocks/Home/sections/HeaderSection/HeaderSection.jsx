@@ -79,6 +79,8 @@ export default function HeaderSection() {
 				))}
 			</nav>
 
+			<span className={classes.desktopSpacer} aria-hidden="true" />
+
 			<button
 				className={classes.menuButton}
 				type="button"

@@ -42,13 +42,13 @@
 }
 
 .authorQuote {
-	margin-top: px-to-vw(60, 1440);
-	width: px-to-vw(850, 1440);
+	margin-top: px-to-vw(53, 1440);
+	width: px-to-vw(466, 1440);
 	text-align: left;
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
-	font-weight: 300;
-	line-height: 1.2;
+	font-weight: 400;
+	line-height: normal;
 	color: #3a3a3a;
 }
 
@@ -77,6 +77,6 @@
 	.authorQuote {
 		width: px-to-vw(319, 390);
 		margin-top: px-to-vw(40, 390);
-		font-size: px-to-vw(20, 390);
+		font-size: px-to-vw(15, 390);
 	}
 }

@@ -1,8 +1,7 @@
 .header {
 	position: relative;
 	height: px-to-vw(68, 1440);
-	padding-left: px-to-vw(45, 1440);
-	padding-right: px-to-vw(86, 1440);
+	padding-inline: px-to-vw(45, 1440);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -45,6 +44,11 @@
 	text-transform: lowercase;
 }
 
+.desktopSpacer {
+	width: px-to-vw(122, 1440);
+	flex-shrink: 0;
+}
+
 .menuButton {
 	display: none;
 	align-items: center;
@@ -83,6 +87,10 @@
 	}
 
 	.nav {
+		display: none;
+	}
+
+	.desktopSpacer {
 		display: none;
 	}
 
