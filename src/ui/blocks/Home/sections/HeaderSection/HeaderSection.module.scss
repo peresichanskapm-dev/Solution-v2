@@ -4,7 +4,7 @@
 	padding-inline: px-to-vw(45, 1440);
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .header::before {
@@ -33,6 +33,7 @@
 	display: flex;
 	align-items: center;
 	gap: px-to-vw(94, 1440);
+	margin-left: auto;
 }
 
 .navItem {
@@ -45,7 +46,7 @@
 }
 
 .desktopSpacer {
-	width: px-to-vw(122, 1440);
+	width: px-to-vw(41, 1440);
 	flex-shrink: 0;
 }
 

@@ -98,7 +98,7 @@
 	.issueText {
 		position: absolute;
 		top: px-to-vw(70, 390);
-		left: px-to-vw(87, 390);
+		left: px-to-vw(77, 390);
 		width: px-to-vw(217, 390);
 		margin-left: 0;
 	}
@@ -112,15 +112,18 @@
 
 	.issueParagraph {
 		margin-top: px-to-vw(20, 390);
+		width: px-to-vw(217, 390);
 		font-size: px-to-vw(14, 390);
-		line-height: 1.209743;
+		line-height: 1;
+		color: #000;
+		opacity: 0.8;
 		text-align: left;
 	}
 
 	.issueDiagram {
 		position: absolute;
 		top: px-to-vw(311, 390);
-		left: px-to-vw(13, 390);
+		left: px-to-vw(3, 390);
 		width: px-to-vw(363, 390);
 		height: px-to-vw(363, 390);
 		margin-top: 0;

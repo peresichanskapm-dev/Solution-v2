@@ -85,13 +85,19 @@
 
 	.focusStatement {
 		width: px-to-vw(212, 390);
-		margin-top: px-to-vw(230, 390);
-		font-size: px-to-vw(40, 390);
+		margin-top: px-to-vw(231, 390);
+		font-size: px-to-vw(25, 390);
+		line-height: 1.08;
+		letter-spacing: px-to-vw(-0.75, 390);
 	}
 
 	.focusCard {
 		width: px-to-vw(295, 390);
-		margin: px-to-vw(34, 390) auto 0;
+		margin: px-to-vw(72, 390) auto 0;
+	}
+
+	.focusCardImage {
+		border-radius: px-to-vw(10, 390);
 	}
 
 	.playButton {
