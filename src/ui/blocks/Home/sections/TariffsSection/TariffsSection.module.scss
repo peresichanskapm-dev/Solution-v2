@@ -1,60 +1,84 @@
-.tariffs {
+﻿.tariffs {
+	position: relative;
 	min-height: px-to-vw(940, 1440);
-	padding: px-to-vw(64, 1440) px-to-vw(45, 1440) px-to-vw(58, 1440);
 	background: #dfddd3;
+	overflow: hidden;
+	color: #191919;
 }
 
-.tariffsHead {
+.tariffsMeta {
+	position: absolute;
+	left: px-to-vw(629, 1440);
+	top: px-to-vw(-43, 1440);
+	width: px-to-vw(182, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 400;
+	line-height: 1.2;
+	color: #838366;
+	opacity: 0.8;
 	text-align: center;
 }
 
 .tariffsTitle {
-	margin-inline: auto;
-	width: px-to-vw(520, 1440);
+	position: absolute;
+	left: px-to-vw(542, 1440);
+	top: 0;
+	width: px-to-vw(356, 1440);
 	font-family: var(--font-tenor);
-	font-size: px-to-vw(60, 1440);
+	font-size: px-to-vw(40, 1440);
 	font-weight: 400;
-	line-height: 1.08;
-	letter-spacing: px-to-vw(-1.8, 1440);
+	line-height: 1.075;
+	letter-spacing: px-to-vw(-1.2, 1440);
+	text-align: center;
 }
 
 .tariffsLead {
-	margin: px-to-vw(22, 1440) auto 0;
+	position: absolute;
+	left: px-to-vw(536, 1440);
+	top: px-to-vw(106, 1440);
 	width: px-to-vw(368, 1440);
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
 	font-weight: 400;
 	line-height: 1.2;
-	color: #3a3a3a;
+	opacity: 0.8;
+	text-align: center;
 }
 
-.tariffsMeta {
-	margin-top: px-to-vw(20, 1440);
-	font-family: var(--font-inter);
-	font-size: px-to-vw(30, 1440);
-	font-weight: 400;
-	line-height: 1.2;
-	color: #838366;
-}
-
-.programsGrid {
-	margin-top: px-to-vw(50, 1440);
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: px-to-vw(16, 1440);
+.programs {
+	position: relative;
+	z-index: 2;
 }
 
 .programCard {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
+	position: absolute;
+}
+
+.programCardOne {
+	left: px-to-vw(70, 1440);
+	top: px-to-vw(214, 1440);
+}
+
+.programCardTwo {
+	left: px-to-vw(520, 1440);
+	top: px-to-vw(214, 1440);
+}
+
+.programCardThree {
+	left: px-to-vw(970, 1440);
+	top: px-to-vw(214, 1440);
 }
 
 .programImageWrap {
 	position: relative;
+}
+
+.programImageWrapOne,
+.programImageWrapTwo,
+.programImageWrapThree {
 	width: px-to-vw(400, 1440);
-	aspect-ratio: 1 / 1;
+	height: px-to-vw(400, 1440);
 }
 
 .programImage {
@@ -62,93 +86,170 @@
 }
 
 .programIndex {
-	margin-top: px-to-vw(-58, 1440);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: px-to-vw(343, 1440);
 	font-family: var(--font-tenor);
 	font-size: px-to-vw(40, 1440);
 	font-weight: 400;
 	line-height: 1;
+	color: #191919;
 }
 
 .programName {
-	margin-top: px-to-vw(8, 1440);
-	width: px-to-vw(220, 1440);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: px-to-vw(425, 1440);
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.2;
+	text-align: center;
+	color: #191919;
 }
 
-.programRingLabel {
-	margin-top: px-to-vw(8, 1440);
-	font-family: var(--font-tenor);
-	font-size: px-to-vw(14, 1440);
-	letter-spacing: px-to-vw(2, 1440);
-	text-transform: uppercase;
-	color: #838366;
+.programNameOne {
+	width: px-to-vw(208, 1440);
+}
+
+.programNameTwo {
+	width: px-to-vw(209, 1440);
+}
+
+.programNameThree {
+	width: px-to-vw(152, 1440);
 }
 
 .tariffsPrice {
-	display: block;
-	margin: px-to-vw(34, 1440) auto 0;
-	padding: px-to-vw(12, 1440) px-to-vw(54, 1440);
-	border: 1px solid #838366;
-	border-radius: px-to-vw(120, 1440);
+	position: absolute;
+	left: px-to-vw(676, 1440);
+	top: px-to-vw(747, 1440);
+	width: px-to-vw(88, 1440);
 	font-family: var(--font-inter);
-	font-size: px-to-vw(30, 1440);
+	font-size: px-to-vw(22, 1440);
 	font-weight: 400;
 	line-height: 1.2;
-	color: #838366;
+	letter-spacing: px-to-vw(-0.44, 1440);
+	text-align: center;
+	color: #191919;
+}
+
+.tariffsButton {
+	position: absolute;
+	left: px-to-vw(635, 1440);
+	top: px-to-vw(787, 1440);
+	width: px-to-vw(171, 1440);
+	height: px-to-vw(39, 1440);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border: 0;
+	border-radius: px-to-vw(40, 1440);
+	background: #838366;
+	font-family: var(--font-inter);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: px-to-vw(-0.4, 1440);
+	text-transform: uppercase;
+	color: #f5f5f5;
+	cursor: pointer;
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.tariffs {
-		min-height: auto;
-		padding: px-to-vw(70, 390) px-to-vw(15, 390);
-	}
-
-	.tariffsTitle {
-		width: px-to-vw(320, 390);
-		font-size: px-to-vw(44, 390);
-	}
-
-	.tariffsLead {
-		width: px-to-vw(239, 390);
-		font-size: px-to-vw(20, 390);
-		margin-top: px-to-vw(18, 390);
+		min-height: px-to-vw(1471, 390);
 	}
 
 	.tariffsMeta {
-		font-size: px-to-vw(30, 390);
-		margin-top: px-to-vw(16, 390);
+		left: px-to-vw(132, 390);
+		top: px-to-vw(70, 390);
+		width: px-to-vw(127, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: 1.2;
 	}
 
-	.programsGrid {
-		grid-template-columns: 1fr;
-		gap: px-to-vw(20, 390);
-		margin-top: px-to-vw(36, 390);
+	.tariffsTitle {
+		left: px-to-vw(71, 390);
+		top: px-to-vw(102, 390);
+		width: px-to-vw(248, 390);
+		font-size: px-to-vw(25, 390);
+		line-height: 1.08;
+		letter-spacing: px-to-vw(-0.75, 390);
 	}
 
-	.programImageWrap {
+	.tariffsLead {
+		left: px-to-vw(76, 390);
+		top: px-to-vw(171, 390);
+		width: px-to-vw(239, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: 1.2;
+	}
+
+	.programCardOne {
+		left: px-to-vw(49, 390);
+		top: px-to-vw(351, 390);
+	}
+
+	.programCardTwo {
+		left: px-to-vw(49, 390);
+		top: px-to-vw(707, 390);
+	}
+
+	.programCardThree {
+		left: px-to-vw(49, 390);
+		top: px-to-vw(1080, 390);
+	}
+
+	.programImageWrapOne,
+	.programImageWrapThree {
 		width: px-to-vw(292, 390);
+		height: px-to-vw(292, 390);
+	}
+
+	.programImageWrapTwo {
+		width: px-to-vw(291.5244, 390);
+		height: px-to-vw(291.5244, 390);
 	}
 
 	.programIndex {
-		font-size: px-to-vw(35, 390);
-		margin-top: px-to-vw(-36, 390);
+		top: px-to-vw(255, 390);
+		font-size: px-to-vw(22, 390);
 	}
 
 	.programName {
-		width: px-to-vw(239, 390);
-		font-size: px-to-vw(20, 390);
+		top: px-to-vw(304, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: 1.2;
 	}
 
-	.programRingLabel {
-		font-size: px-to-vw(12, 390);
+	.programNameOne {
+		width: px-to-vw(239, 390);
+	}
+
+	.programNameTwo,
+	.programNameThree {
+		width: px-to-vw(180, 390);
 	}
 
 	.tariffsPrice {
-		margin-top: px-to-vw(28, 390);
-		font-size: px-to-vw(30, 390);
-		padding: px-to-vw(12, 390) px-to-vw(50, 390);
+		left: px-to-vw(151, 390);
+		top: px-to-vw(235, 390);
+		width: px-to-vw(88, 390);
+		font-size: px-to-vw(22, 390);
+		letter-spacing: px-to-vw(-0.44, 390);
+	}
+
+	.tariffsButton {
+		left: px-to-vw(118, 390);
+		top: px-to-vw(274, 390);
+		width: px-to-vw(154, 390);
+		height: px-to-vw(37, 390);
+		border-radius: px-to-vw(40, 390);
+		font-size: px-to-vw(14, 390);
+		letter-spacing: px-to-vw(-0.28, 390);
 	}
 }

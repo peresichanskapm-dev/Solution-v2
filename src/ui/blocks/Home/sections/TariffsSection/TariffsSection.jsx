@@ -1,56 +1,54 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import classes from "./TariffsSection.module.scss";
 
 const programs = [
 	{
+		cardClass: "programCardOne",
 		id: "I",
+		nameClass: "programNameOne",
+		imageWrapClass: "programImageWrapOne",
 		name: "відновлення ресурсу",
 		image: "/media/home/programRecovery.png",
-		ring: "Solar Receiving",
 	},
 	{
+		cardClass: "programCardTwo",
 		id: "II",
+		nameClass: "programNameTwo",
+		imageWrapClass: "programImageWrapTwo",
 		name: "повернення внутрішнього центру",
 		image: "/media/home/programCenter.png",
-		ring: "Inner Sun",
 	},
 	{
+		cardClass: "programCardThree",
 		id: "III",
+		nameClass: "programNameThree",
+		imageWrapClass: "programImageWrapThree",
 		name: "дія без напруги",
 		image: "/media/home/programPower.png",
-		ring: "Quiet Power",
 	},
 ];
 
 export default function TariffsSection() {
 	return (
 		<section id="tariffs" className={classes.tariffs}>
-			<div className={classes.tariffsHead}>
-				<h2 className={classes.tariffsTitle}>Solar Activation — вхід у SOLUTION</h2>
-				<p className={classes.tariffsLead}>3 аудіопрограми для повернення енергії, центру й сили.</p>
-				<p className={classes.tariffsMeta}>( перший набір )</p>
-			</div>
+			<p className={classes.tariffsMeta}>( перший набір )</p>
+			<h2 className={classes.tariffsTitle}>Solar Activation — вхід у SOLUTION</h2>
+			<p className={classes.tariffsLead}>3 аудіопрограми для повернення енергії, центру й сили.</p>
 
-			<div className={classes.programsGrid}>
+			<div className={classes.programs}>
 				{programs.map((program) => (
-					<article key={program.id} className={classes.programCard}>
-						<div className={classes.programImageWrap}>
-							<Image
-								src={program.image}
-								alt={program.name}
-								fill
-								sizes="(max-width: 768px) 62vw, 20vw"
-								className={classes.programImage}
-							/>
+					<article key={program.id} className={`${classes.programCard} ${classes[program.cardClass]}`}>
+						<div className={`${classes.programImageWrap} ${classes[program.imageWrapClass]}`}>
+							<Image src={program.image} alt={program.name} fill sizes="(max-width: 768px) 75vw, 400px" className={classes.programImage} />
 						</div>
 						<span className={classes.programIndex}>{program.id}</span>
-						<p className={classes.programName}>{program.name}</p>
-						<span className={classes.programRingLabel}>{program.ring}</span>
+						<p className={`${classes.programName} ${classes[program.nameClass]}`}>{program.name}</p>
 					</article>
 				))}
 			</div>
 
-			<button className={classes.tariffsPrice}>999 грн</button>
+			<p className={classes.tariffsPrice}>999 грн</p>
+			<button className={classes.tariffsButton}>ПРидбати пакет</button>
 		</section>
 	);
 }
