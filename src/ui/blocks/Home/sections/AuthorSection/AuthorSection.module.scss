@@ -1,39 +1,47 @@
 .author {
+	position: relative;
 	min-height: px-to-vw(807, 1440);
 	background: #dfddd3;
-	padding: px-to-vw(110, 1440) px-to-vw(45, 1440) px-to-vw(86, 1440);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	overflow: hidden;
 }
 
 .authorTitle {
+	position: absolute;
+	left: px-to-vw(542, 1440);
+	top: px-to-vw(110, 1440);
 	width: px-to-vw(356, 1440);
-	text-align: center;
+	margin: 0;
 	font-family: var(--font-tenor);
-	font-size: px-to-vw(60, 1440);
+	font-size: px-to-vw(40, 1440);
 	font-weight: 400;
-	line-height: 1.08;
-	letter-spacing: px-to-vw(-1.8, 1440);
+	line-height: px-to-vw(43, 1440);
+	letter-spacing: px-to-vw(-1.2, 1440);
+	text-align: center;
+	color: #000;
 }
 
 .authorMeta {
-	margin-top: px-to-vw(26, 1440);
+	position: absolute;
+	left: px-to-vw(558, 1440);
+	top: px-to-vw(209, 1440);
 	width: px-to-vw(324, 1440);
-	text-align: center;
+	margin: 0;
 	font-family: var(--font-inter);
-	font-size: px-to-vw(30, 1440);
+	font-size: px-to-vw(20, 1440);
 	font-weight: 400;
-	line-height: 1.2;
+	line-height: normal;
 	color: #838366;
+	opacity: 0.8;
+	text-align: center;
 }
 
 .authorPhotoWrap {
-	position: relative;
+	position: absolute;
+	left: px-to-vw(613, 1440);
+	top: px-to-vw(309, 1440);
 	width: px-to-vw(215, 1440);
-	aspect-ratio: 1 / 1;
-	margin-top: px-to-vw(52, 1440);
-	border-radius: px-to-vw(16, 1440);
+	height: px-to-vw(215, 1440);
+	border-radius: px-to-vw(10, 1440);
 	overflow: hidden;
 }
 
@@ -42,41 +50,54 @@
 }
 
 .authorQuote {
-	margin-top: px-to-vw(53, 1440);
+	position: absolute;
+	left: px-to-vw(487, 1440);
+	top: px-to-vw(577, 1440);
 	width: px-to-vw(466, 1440);
-	text-align: left;
+	margin: 0;
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
 	font-weight: 400;
 	line-height: normal;
-	color: #3a3a3a;
+	color: #000;
+	opacity: 0.8;
+	text-align: justify;
+	white-space: pre-wrap;
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.author {
-		min-height: auto;
-		padding: px-to-vw(70, 390) px-to-vw(15, 390) px-to-vw(52, 390);
+		min-height: px-to-vw(614, 390);
 	}
 
 	.authorTitle {
-		width: px-to-vw(280, 390);
-		font-size: px-to-vw(44, 390);
+		left: px-to-vw(89, 390);
+		top: px-to-vw(81, 390);
+		width: px-to-vw(212, 390);
+		font-size: px-to-vw(25, 390);
+		line-height: px-to-vw(27, 390);
+		letter-spacing: px-to-vw(-0.75, 390);
 	}
 
 	.authorMeta {
-		width: px-to-vw(240, 390);
-		margin-top: px-to-vw(16, 390);
-		font-size: px-to-vw(30, 390);
+		left: px-to-vw(109, 390);
+		top: px-to-vw(150, 390);
+		width: px-to-vw(172, 390);
+		font-size: px-to-vw(14, 390);
 	}
 
 	.authorPhotoWrap {
+		left: px-to-vw(109, 390);
+		top: px-to-vw(224, 390);
 		width: px-to-vw(172, 390);
-		margin-top: px-to-vw(24, 390);
+		height: px-to-vw(172, 390);
+		border-radius: px-to-vw(10, 390);
 	}
 
 	.authorQuote {
+		left: px-to-vw(35, 390);
+		top: px-to-vw(436, 390);
 		width: px-to-vw(319, 390);
-		margin-top: px-to-vw(40, 390);
 		font-size: px-to-vw(15, 390);
 	}
 }

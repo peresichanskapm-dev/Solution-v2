@@ -1,45 +1,65 @@
 .footer {
+	position: relative;
 	height: px-to-vw(155, 1440);
-	padding: px-to-vw(32, 1440) px-to-vw(45, 1440) px-to-vw(12, 1440);
+	display: grid;
+	grid-template-rows: px-to-vw(107, 1440) px-to-vw(38, 1440) px-to-vw(10, 1440);
+	overflow: hidden;
+}
+
+.footer.footer::after {
+	content: none;
+}
+
+.footerTop {
+	grid-row: 1;
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
 	align-items: start;
+	padding-inline: px-to-vw(70, 1440);
 }
 
-.footerLeft,
-.footerRight {
-	display: flex;
-	gap: px-to-vw(24, 1440);
-}
-
-.footerRight {
-	justify-content: flex-end;
-	align-items: flex-start;
-}
-
-.footerLinksRight {
-	display: flex;
-	flex-direction: column;
-	gap: px-to-vw(2, 1440);
-	align-items: flex-end;
+.footerLinks {
+	justify-self: start;
+	margin-top: px-to-vw(32, 1440);
+	display: grid;
+	grid-template-columns: max-content max-content;
+	grid-template-areas:
+		"project author"
+		"audience tariffs";
+		column-gap: px-to-vw(86, 1440);
+	row-gap: px-to-vw(3, 1440);
 }
 
 .footerLink {
+	margin: 0;
 	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
+	font-size: px-to-vw(15, 1440);
 	font-weight: 300;
-	line-height: 1.2;
+	line-height: normal;
+	opacity: 0.6;
 	color: #000;
+	white-space: nowrap;
 }
 
-.footerCenter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.footerLinkProject {
+	grid-area: project;
+}
+
+.footerLinkAudience {
+	grid-area: audience;
+}
+
+.footerLinkAuthor {
+	grid-area: author;
+}
+
+.footerLinkTariffs {
+	grid-area: tariffs;
 }
 
 .footerLogo {
 	position: relative;
+	margin-top: px-to-vw(33, 1440);
 	width: px-to-vw(200, 1440);
 	height: px-to-vw(42, 1440);
 	display: block;
@@ -49,18 +69,11 @@
 	object-fit: contain;
 }
 
-.footerCopy {
-	margin-top: px-to-vw(42, 1440);
-	font-family: var(--font-inter);
-	font-size: px-to-vw(16, 1440);
-	font-weight: 300;
-	line-height: 1.2;
-}
-
 .footerSocials {
+	justify-self: end;
+	margin-top: px-to-vw(39, 1440);
 	display: flex;
-	gap: px-to-vw(10, 1440);
-	margin-top: px-to-vw(8, 1440);
+	gap: px-to-vw(9, 1440);
 }
 
 .socialItem {
@@ -70,43 +83,96 @@
 	display: block;
 }
 
+.footerMiddle {
+	grid-row: 2;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.footerMiddle::before,
+.footerMiddle::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	width: 100vw;
+	transform: translateX(-50%);
+	border-top: 1px solid #000;
+	pointer-events: none;
+}
+
+.footerMiddle::before {
+	top: 0;
+}
+
+.footerMiddle::after {
+	top: 100%;
+}
+
+.footerCopy {
+	margin: px-to-vw(11, 1440) 0 0;
+	font-family: var(--font-inter);
+	font-size: px-to-vw(13, 1440);
+	font-weight: 300;
+	line-height: normal;
+	opacity: 0.4;
+	color: #000;
+	white-space: nowrap;
+}
+
 @media screen and (max-width: $brakePointMobile) {
 	.footer {
-		height: auto;
-		padding: px-to-vw(22, 390) px-to-vw(15, 390) px-to-vw(16, 390);
-		grid-template-columns: 1fr;
-		row-gap: px-to-vw(12, 390);
+		height: px-to-vw(296, 390);
+		grid-template-rows: px-to-vw(242, 390) px-to-vw(45, 390) px-to-vw(9, 390);
 	}
 
-	.footerLeft,
-	.footerRight {
-		justify-content: center;
-	}
-
-	.footerCenter {
-		order: -1;
-	}
-
-	.footerLink {
-		font-size: px-to-vw(15, 390);
+	.footerTop {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-inline: 0;
 	}
 
 	.footerLogo {
+		order: 1;
+		margin-top: px-to-vw(40, 390);
 		width: px-to-vw(120, 390);
 		height: px-to-vw(26, 390);
 	}
 
-	.footerCopy {
-		margin-top: px-to-vw(12, 390);
-		font-size: px-to-vw(15, 390);
+	.footerLinks {
+		order: 2;
+		margin-top: px-to-vw(20, 390);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"project"
+			"audience"
+			"author"
+			"tariffs";
+		column-gap: 0;
+		row-gap: px-to-vw(5, 390);
+		justify-items: center;
+	}
+
+	.footerLink {
+		font-size: px-to-vw(12, 390);
 	}
 
 	.footerSocials {
-		margin-top: 0;
+		order: 3;
+		justify-self: auto;
+		margin-top: px-to-vw(20, 390);
+		gap: px-to-vw(7, 390);
 	}
 
 	.socialItem {
 		width: px-to-vw(21, 390);
 		height: px-to-vw(21, 390);
+	}
+
+	.footerCopy {
+		margin-top: px-to-vw(15, 390);
+		font-size: px-to-vw(12, 390);
 	}
 }
