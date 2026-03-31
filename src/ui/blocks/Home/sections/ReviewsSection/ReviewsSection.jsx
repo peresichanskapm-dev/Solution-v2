@@ -16,6 +16,7 @@ const reviewSlides = [
 
 const transitionDurationMs = 550;
 const slideImageQuality = 100;
+const swipeThresholdPx = 40;
 
 export default function ReviewsSection() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,12 +24,28 @@ export default function ReviewsSection() {
 	const [direction, setDirection] = useState(1);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const transitionTimeoutRef = useRef(null);
+	const touchStartXRef = useRef(null);
+	const touchDeltaXRef = useRef(0);
 
 	useEffect(() => {
 		return () => {
 			if (transitionTimeoutRef.current) {
 				clearTimeout(transitionTimeoutRef.current);
 			}
+		};
+	}, []);
+
+	useEffect(() => {
+		const preloadedSlides = reviewSlides.map(({ src }) => {
+			const image = new window.Image();
+			image.src = src;
+			return image;
+		});
+
+		return () => {
+			preloadedSlides.forEach((image) => {
+				image.src = "";
+			});
 		};
 	}, []);
 
@@ -57,6 +74,42 @@ export default function ReviewsSection() {
 
 	const currentSlideData = reviewSlides[currentSlide];
 
+	const handleTouchStart = (event) => {
+		if (event.touches.length !== 1) {
+			return;
+		}
+
+		touchStartXRef.current = event.touches[0].clientX;
+		touchDeltaXRef.current = 0;
+	};
+
+	const handleTouchMove = (event) => {
+		if (touchStartXRef.current === null || event.touches.length !== 1) {
+			return;
+		}
+
+		touchDeltaXRef.current = event.touches[0].clientX - touchStartXRef.current;
+	};
+
+	const resetTouchState = () => {
+		touchStartXRef.current = null;
+		touchDeltaXRef.current = 0;
+	};
+
+	const handleTouchEnd = () => {
+		if (touchStartXRef.current === null) {
+			return;
+		}
+
+		const deltaX = touchDeltaXRef.current;
+
+		if (Math.abs(deltaX) >= swipeThresholdPx) {
+			handleSlideChange(deltaX < 0 ? 1 : -1);
+		}
+
+		resetTouchState();
+	};
+
 	return (
 		<section className={classes.reviews}>
 			<div className={classes.reviewsBackground}>
@@ -65,13 +118,21 @@ export default function ReviewsSection() {
 			<div className={classes.reviewsOverlay} />
 
 			<div className={classes.reviewsCircle}>
-				<div className={classes.reviewsSlider} aria-live="polite">
+				<div
+					className={classes.reviewsSlider}
+					aria-live="polite"
+					onTouchStart={handleTouchStart}
+					onTouchMove={handleTouchMove}
+					onTouchEnd={handleTouchEnd}
+					onTouchCancel={resetTouchState}
+				>
 					{leavingSlide !== null && (
 						<Image
 							src={reviewSlides[leavingSlide].src}
 							alt=""
 							aria-hidden="true"
 							fill
+							loading="eager"
 							quality={slideImageQuality}
 							sizes="(max-width: 768px) 370px, 695px"
 							className={`${classes.reviewsCircleImage} ${direction > 0 ? classes.slideExitToLeft : classes.slideExitToRight}`}
@@ -82,6 +143,7 @@ export default function ReviewsSection() {
 						src={currentSlideData.src}
 						alt={currentSlideData.alt}
 						fill
+						loading="eager"
 						quality={slideImageQuality}
 						sizes="(max-width: 768px) 370px, 695px"
 						priority={currentSlide === 0}

@@ -41,6 +41,7 @@
 	inset: 0;
 	border-radius: 50%;
 	overflow: hidden;
+	touch-action: pan-y;
 }
 
 .reviewsCircleImage {
