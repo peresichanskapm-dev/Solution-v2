@@ -5,99 +5,340 @@
 	overflow: hidden;
 }
 
-.authorTitle {
+.decorOuterDesktop,
+.decorMiddleDesktop,
+.portraitDesktop,
+.decorOuterMobile,
+.decorMiddleMobile,
+.portraitMobile,
+.quoteBubbleDesktop,
+.quoteBubbleMobile,
+.authorIconWrap {
 	position: absolute;
-	left: px-to-vw(542, 1440);
-	top: px-to-vw(110, 1440);
-	width: px-to-vw(356, 1440);
-	margin: 0;
-	font-family: var(--font-tenor);
-	font-size: px-to-vw(40, 1440);
-	font-weight: 400;
-	line-height: px-to-vw(43, 1440);
-	letter-spacing: px-to-vw(-1.2, 1440);
-	text-align: center;
-	color: #000;
 }
 
-.authorMeta {
-	position: absolute;
-	left: px-to-vw(558, 1440);
-	top: px-to-vw(209, 1440);
-	width: px-to-vw(324, 1440);
-	margin: 0;
-	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 400;
-	line-height: normal;
-	color: #838366;
-	opacity: 0.8;
-	text-align: center;
+.decorOuterDesktop {
+	left: px-to-vw(14, 1440);
+	top: px-to-vw(46, 1440);
+	width: px-to-vw(651.082, 1440);
+	height: px-to-vw(650.582, 1440);
 }
 
-.authorPhotoWrap {
+.decorMiddleDesktop {
+	left: px-to-vw(108.44, 1440);
+	top: px-to-vw(140.49, 1440);
+	width: px-to-vw(463.51, 1440);
+	height: px-to-vw(462.952, 1440);
+}
+
+.portraitDesktop {
+	left: px-to-vw(157.88, 1440);
+	top: px-to-vw(185.26, 1440);
+	width: px-to-vw(369.969, 1440);
+	height: px-to-vw(370.477, 1440);
+}
+
+.decorOuterMobile,
+.decorMiddleMobile,
+.portraitMobile {
+	display: none;
+}
+
+.authorHead {
 	position: absolute;
-	left: px-to-vw(613, 1440);
-	top: px-to-vw(309, 1440);
-	width: px-to-vw(215, 1440);
-	height: px-to-vw(215, 1440);
-	border-radius: px-to-vw(10, 1440);
+	left: px-to-vw(651.289, 1440);
+	top: px-to-vw(114.213, 1440);
+	width: px-to-vw(351, 1440);
+	display: flex;
+	align-items: center;
+}
+
+.authorIconWrap {
+	left: 0;
+	top: px-to-vw(6, 1440);
+	width: px-to-vw(27, 1440);
+	height: px-to-vw(31, 1440);
 	overflow: hidden;
 }
 
-.authorPhoto {
-	object-fit: cover;
+.authorIcon {
+	width: 1280.43% !important;
+	height: 637.14% !important;
+	max-width: none;
+	left: -595.65% !important;
+	top: -186.67% !important;
 }
 
-.authorQuote {
+.authorName {
+	width: px-to-vw(324, 1440);
+	margin: 0 0 0 px-to-vw(27, 1440);
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(45, 1440);
+	font-weight: 400;
+	line-height: px-to-vw(43, 1440);
+	letter-spacing: px-to-vw(-1.35, 1440);
+	text-align: center;
+	color: #000;
+}
+
+.authorRole {
 	position: absolute;
-	left: px-to-vw(487, 1440);
-	top: px-to-vw(577, 1440);
-	width: px-to-vw(466, 1440);
+	left: px-to-vw(690.289, 1440);
+	top: px-to-vw(164.213, 1440);
+	width: px-to-vw(285, 1440);
 	margin: 0;
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 400;
+	line-height: px-to-vw(25, 1440);
+	letter-spacing: px-to-vw(-0.6, 1440);
+	text-align: center;
+	color: #6a695d;
+}
+
+.authorLeadIntro,
+.authorLeadJourney,
+.authorQuote,
+.authorBio,
+.authorTodayDesktop,
+.authorTodayMobile,
+.authorMottoDesktop,
+.authorMottoMobile {
+	position: absolute;
+	margin: 0;
+}
+
+.authorLeadIntro,
+.authorLeadJourney {
+	left: px-to-vw(651.289, 1440);
+	width: px-to-vw(581, 1440);
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
 	font-weight: 400;
-	line-height: normal;
+	line-height: px-to-vw(25, 1440);
+	letter-spacing: px-to-vw(-0.6, 1440);
 	color: #000;
-	opacity: 0.8;
+}
+
+.authorLeadIntro {
+	top: px-to-vw(221.213, 1440);
+}
+
+.authorLeadJourney {
+	top: px-to-vw(296.213, 1440);
+}
+
+.quoteBubbleDesktop {
+	left: px-to-vw(859.289, 1440);
+	top: px-to-vw(386.213, 1440);
+	width: px-to-vw(498, 1440);
+	height: px-to-vw(115, 1440);
+}
+
+.quoteBubbleMobile {
+	display: none;
+}
+
+.authorQuote {
+	left: px-to-vw(873.289, 1440);
+	top: px-to-vw(403.213, 1440);
+	width: px-to-vw(466, 1440);
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(18, 1440);
+	font-weight: 400;
+	line-height: normal;
 	text-align: justify;
 	white-space: pre-wrap;
+	opacity: 0.8;
+	color: #000;
+}
+
+.authorBio {
+	left: px-to-vw(652.289, 1440);
+	top: px-to-vw(517.213, 1440);
+	width: px-to-vw(631, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(18, 1440);
+	font-weight: 400;
+	line-height: px-to-vw(25, 1440);
+	letter-spacing: px-to-vw(-0.54, 1440);
+	color: #191919;
+}
+
+.authorTodayDesktop,
+.authorTodayMobile {
+	left: px-to-vw(652.289, 1440);
+	width: px-to-vw(442, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(18, 1440);
+	font-weight: 400;
+	line-height: px-to-vw(25, 1440);
+	letter-spacing: px-to-vw(-0.54, 1440);
+	color: #2b2b28;
+}
+
+.authorTodayDesktop {
+	top: px-to-vw(607.213, 1440);
+}
+
+.authorTodayMobile {
+	display: none;
+}
+
+.authorTodayLabel {
+	font-family: var(--font-tenor);
+}
+
+.authorMottoDesktop,
+.authorMottoMobile {
+	font-family: var(--font-tenor);
+	font-weight: 400;
+	opacity: 0.8;
+	color: #6a695d;
+	text-align: justify;
+}
+
+.authorMottoDesktop {
+	left: px-to-vw(947.289, 1440);
+	top: px-to-vw(647.213, 1440);
+	width: px-to-vw(330, 1440);
+	font-size: px-to-vw(16, 1440);
+	line-height: normal;
+	white-space: pre-wrap;
+}
+
+.authorMottoMobile {
+	display: none;
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.author {
-		min-height: px-to-vw(614, 390);
+		min-height: px-to-vw(997, 390);
 	}
 
-	.authorTitle {
-		left: px-to-vw(89, 390);
-		top: px-to-vw(81, 390);
-		width: px-to-vw(212, 390);
+	.decorOuterDesktop,
+	.decorMiddleDesktop,
+	.portraitDesktop,
+	.quoteBubbleDesktop,
+	.authorTodayDesktop,
+	.authorMottoDesktop {
+		display: none;
+	}
+
+	.decorOuterMobile,
+	.decorMiddleMobile,
+	.portraitMobile,
+	.quoteBubbleMobile,
+	.authorTodayMobile,
+	.authorMottoMobile {
+		display: block;
+	}
+
+	.decorOuterMobile {
+		left: px-to-vw(45, 390);
+		top: px-to-vw(134, 390);
+		width: px-to-vw(299.23, 390);
+		height: px-to-vw(299, 390);
+	}
+
+	.decorMiddleMobile {
+		left: px-to-vw(88.4, 390);
+		top: px-to-vw(177.43, 390);
+		width: px-to-vw(213.024, 390);
+		height: px-to-vw(212.767, 390);
+	}
+
+	.portraitMobile {
+		left: px-to-vw(111.13, 390);
+		top: px-to-vw(198, 390);
+		width: px-to-vw(170.034, 390);
+		height: px-to-vw(170.267, 390);
+	}
+
+	.authorHead {
+		left: px-to-vw(25, 390);
+		top: px-to-vw(76, 390);
+		width: px-to-vw(201, 390);
+	}
+
+	.authorIconWrap {
+		top: px-to-vw(8, 390);
+		width: px-to-vw(23, 390);
+		height: px-to-vw(27, 390);
+	}
+
+	.authorName {
+		width: px-to-vw(174, 390);
+		margin-left: px-to-vw(23, 390);
 		font-size: px-to-vw(25, 390);
-		line-height: px-to-vw(27, 390);
+		line-height: px-to-vw(43, 390);
 		letter-spacing: px-to-vw(-0.75, 390);
 	}
 
-	.authorMeta {
-		left: px-to-vw(109, 390);
-		top: px-to-vw(150, 390);
-		width: px-to-vw(172, 390);
-		font-size: px-to-vw(14, 390);
+	.authorRole {
+		left: px-to-vw(25, 390);
+		top: px-to-vw(111, 390);
+		width: px-to-vw(214, 390);
+		font-size: px-to-vw(15, 390);
+		line-height: px-to-vw(25, 390);
+		letter-spacing: px-to-vw(-0.45, 390);
 	}
 
-	.authorPhotoWrap {
-		left: px-to-vw(109, 390);
-		top: px-to-vw(224, 390);
-		width: px-to-vw(172, 390);
-		height: px-to-vw(172, 390);
-		border-radius: px-to-vw(10, 390);
+	.authorLeadIntro,
+	.authorLeadJourney {
+		left: px-to-vw(25, 390);
+		width: px-to-vw(340, 390);
+		font-size: px-to-vw(15, 390);
+		line-height: px-to-vw(22, 390);
+		letter-spacing: px-to-vw(-0.45, 390);
+	}
+
+	.authorLeadIntro {
+		top: px-to-vw(425, 390);
+	}
+
+	.authorLeadJourney {
+		top: px-to-vw(502, 390);
+	}
+
+	.quoteBubbleMobile {
+		left: px-to-vw(64, 390);
+		top: px-to-vw(612, 390);
+		width: px-to-vw(301, 390);
+		height: px-to-vw(88, 390);
 	}
 
 	.authorQuote {
-		left: px-to-vw(35, 390);
-		top: px-to-vw(436, 390);
-		width: px-to-vw(319, 390);
-		font-size: px-to-vw(15, 390);
+		left: px-to-vw(75, 390);
+		top: px-to-vw(627, 390);
+		width: px-to-vw(274, 390);
+		font-size: px-to-vw(12, 390);
+		line-height: normal;
+	}
+
+	.authorBio {
+		left: px-to-vw(25, 390);
+		top: px-to-vw(722, 390);
+		width: px-to-vw(340, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: px-to-vw(20, 390);
+		letter-spacing: px-to-vw(-0.42, 390);
+	}
+
+	.authorTodayMobile {
+		left: px-to-vw(25, 390);
+		top: px-to-vw(817, 390);
+		width: px-to-vw(340, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: px-to-vw(20, 390);
+		letter-spacing: px-to-vw(-0.42, 390);
+	}
+
+	.authorMottoMobile {
+		left: px-to-vw(118, 390);
+		top: px-to-vw(872, 390);
+		width: px-to-vw(247, 390);
+		font-size: px-to-vw(14, 390);
+		line-height: normal;
 	}
 }
