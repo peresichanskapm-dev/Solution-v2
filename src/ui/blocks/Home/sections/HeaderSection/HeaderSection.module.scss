@@ -40,9 +40,10 @@
 	font-family: var(--font-inter);
 	font-size: px-to-vw(15, 1440);
 	font-weight: 300;
-	line-height: 1.21;
+	line-height: normal;
 	color: #000;
 	text-transform: lowercase;
+	opacity: 0.6;
 }
 
 .desktopSpacer {

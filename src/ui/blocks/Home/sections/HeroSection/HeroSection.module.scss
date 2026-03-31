@@ -40,9 +40,10 @@
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
 	font-weight: 300;
-	line-height: 1.210227;
+	line-height: normal;
 	width: px-to-vw(260, 1440);
 	margin-inline: auto;
+	opacity: 0.8;
 }
 
 .heroButton {
@@ -73,7 +74,8 @@
 	font-family: var(--font-inter);
 	font-size: px-to-vw(16, 1440);
 	font-weight: 300;
-	line-height: 1.210227;
+	line-height: normal;
+	opacity: 0.6;
 }
 
 .heroTagLeft {
