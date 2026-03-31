@@ -36,6 +36,22 @@
 	position: relative;
 }
 
+.sectionSlot {
+	position: relative;
+}
+
+.sectionSlot + .sectionSlot::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 100vw;
+	transform: translateX(-50%);
+	border-top: 1px solid #000;
+	pointer-events: none;
+	z-index: 60;
+}
+
 @media screen and (max-width: $brakePointMobile) {
 	.canvas {
 		width: px-to-vw(370, 390);

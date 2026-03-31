@@ -14,16 +14,36 @@ export default function Home() {
 	return (
 		<section className={classes.page}>
 			<div className={classes.canvas}>
-				<HeaderSection />
-				<HeroSection />
-				<StateIssueSection />
-				<FocusStateSection />
-				<HowSection />
-				<AudienceSection />
-				<TariffsSection />
-				<ReviewsSection />
-				<AuthorSection />
-				<FooterSection />
+				<div className={classes.sectionSlot}>
+					<HeaderSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<HeroSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<StateIssueSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<FocusStateSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<HowSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<AudienceSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<TariffsSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<ReviewsSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<AuthorSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<FooterSection />
+				</div>
 			</div>
 		</section>
 	);

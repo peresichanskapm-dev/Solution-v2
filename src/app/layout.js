@@ -17,6 +17,9 @@ const tenorSans = Tenor_Sans({
 });
 
 export const metadata = baseMetadata;
+export const viewport = {
+	themeColor: "#e9e5da",
+};
 
 export default function RootLayout({ children }) {
 	return (

@@ -1,27 +1,38 @@
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://solution-site.com";
+
 export const baseMetadata = {
-	title: "Next.js starter kit",
-	description: "Next.js starter kit by Vladyslav Dubinin",
+	title: "SOLUTION | State Shift Audio Programs",
+	description: "SOLUTION - state-shift audio programs for a gentle psycho-spiritual reset in 5-12 minutes.",
 
-	metadataBase: new URL("https://vladyslav-dubin.in"),
+	metadataBase: new URL(siteUrl),
 
-	applicationName: "Next.js starter kit",
-	creator: "Vladyslav Dubinin",
+	applicationName: "SOLUTION",
+	creator: "Olena Tretyak",
 	authors: [
 		{
-			name: "Vladyslav Dubinin",
-			url: "https://vladyslav-dubin.in",
+			name: "Olena Tretyak",
+			url: "https://www.instagram.com/elenatretyakova/",
 		},
 	],
 
-	keywords: ["Next.js", "React", "Frontend", "Starter Kit", "Vladyslav Dubinin"],
+	keywords: [
+		"SOLUTION",
+		"state shift",
+		"audio program",
+		"guided audio",
+		"focus reset",
+		"somatic reset",
+		"mental clarity",
+		"stress recovery",
+		"wellbeing",
+	],
 
-	category: "technology",
+	category: "health",
 
 	alternates: {
-		canonical: "https://vladyslav-dubin.in",
+		canonical: "/",
 		languages: {
-			uk: "https://vladyslav-dubin.in",
-			en: "https://vladyslav-dubin.in/en",
+			uk: "/",
 		},
 	},
 
@@ -38,46 +49,45 @@ export const baseMetadata = {
 	},
 
 	openGraph: {
-		title: "Next.js starter kit",
-		description: "Next.js starter kit by Vladyslav Dubinin",
-		url: "https://vladyslav-dubin.in",
-		siteName: "Next.js starter kit",
+		title: "SOLUTION | State Shift Audio Programs",
+		description: "State-shift audio programs to restore energy, inner center, and clarity in 5-12 minutes.",
+		url: "/",
+		siteName: "SOLUTION",
 		locale: "uk_UA",
 		type: "website",
 		images: [
 			{
-				url: "/media/metadata/banner.png",
-				width: 768,
-				height: 768,
-				alt: "Next.js starter kit by Vladyslav Dubinin",
+				url: "/media/home/heroPhoto.png",
+				width: 1390,
+				height: 1390,
+				alt: "SOLUTION - state-shift audio programs",
 			},
 		],
 	},
 
 	twitter: {
 		card: "summary_large_image",
-		title: "Next.js starter kit",
-		description: "Next.js starter kit by Vladyslav Dubinin",
-		images: ["/media/metadata/banner.png"],
+		title: "SOLUTION | State Shift Audio Programs",
+		description: "SOLUTION audio programs for a gentle reset in 5-12 minutes.",
+		images: ["/media/home/heroPhoto.png"],
 	},
-
-	themeColor: "#ffffff",
 
 	icons: {
 		icon: [
 			{
-				url: "/media/metadata/faviconMedium.png",
-				sizes: "64x64",
+				url: "/media/home/favicon.png",
+				sizes: "128x128",
 				type: "image/png",
 			},
 		],
 		apple: [
 			{
-				url: "/media/metadata/banner.png",
-				sizes: "768x768",
+				url: "/media/home/favicon.png",
+				sizes: "128x128",
+				type: "image/png",
 			},
 		],
-		shortcut: "/media/metadata/favicon.png",
+		shortcut: "/media/home/favicon.png",
 	},
 };
 

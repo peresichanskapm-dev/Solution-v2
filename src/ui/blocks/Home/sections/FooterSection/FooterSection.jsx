@@ -31,10 +31,16 @@ export default function FooterSection() {
 				</a>
 
 				<div className={classes.footerSocials}>
-					<a href="#" className={classes.socialItem} aria-label="Telegram">
+					<a href="https://t.me/elenatretyakova1" className={classes.socialItem} aria-label="Telegram" target="_blank" rel="noopener noreferrer">
 						<Image src="/media/home/telegram.png" alt="" fill sizes="(max-width: 768px) 21px, 31px" />
 					</a>
-					<a href="#" className={classes.socialItem} aria-label="Instagram">
+					<a
+						href="https://www.instagram.com/elenatretyakova/"
+						className={classes.socialItem}
+						aria-label="Instagram"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<Image src="/media/home/instagram.png" alt="" fill sizes="(max-width: 768px) 21px, 31px" />
 					</a>
 				</div>

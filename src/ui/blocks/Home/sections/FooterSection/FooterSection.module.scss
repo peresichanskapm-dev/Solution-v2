@@ -3,7 +3,7 @@
 	height: px-to-vw(155, 1440);
 	display: grid;
 	grid-template-rows: px-to-vw(107, 1440) px-to-vw(38, 1440) px-to-vw(10, 1440);
-	overflow: hidden;
+	overflow: visible;
 }
 
 .footer.footer::after {
