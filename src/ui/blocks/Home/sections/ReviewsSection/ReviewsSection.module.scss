@@ -45,27 +45,29 @@
 
 .reviewsCircleImage {
 	object-fit: cover;
-	will-change: opacity, transform;
 }
 
 .slideStatic {
 	opacity: 1;
-	transform: translateX(0);
 }
 
 .slideEnterFromRight {
+	will-change: opacity, transform;
 	animation: reviewSlideEnterFromRight 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
 .slideEnterFromLeft {
+	will-change: opacity, transform;
 	animation: reviewSlideEnterFromLeft 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
 .slideExitToLeft {
+	will-change: opacity, transform;
 	animation: reviewSlideExitToLeft 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
 .slideExitToRight {
+	will-change: opacity, transform;
 	animation: reviewSlideExitToRight 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 

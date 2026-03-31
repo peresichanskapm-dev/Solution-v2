@@ -15,6 +15,7 @@ const reviewSlides = [
 ];
 
 const transitionDurationMs = 550;
+const slideImageQuality = 100;
 
 export default function ReviewsSection() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -71,6 +72,7 @@ export default function ReviewsSection() {
 							alt=""
 							aria-hidden="true"
 							fill
+							quality={slideImageQuality}
 							sizes="(max-width: 768px) 370px, 695px"
 							className={`${classes.reviewsCircleImage} ${direction > 0 ? classes.slideExitToLeft : classes.slideExitToRight}`}
 						/>
@@ -80,6 +82,7 @@ export default function ReviewsSection() {
 						src={currentSlideData.src}
 						alt={currentSlideData.alt}
 						fill
+						quality={slideImageQuality}
 						sizes="(max-width: 768px) 370px, 695px"
 						priority={currentSlide === 0}
 						className={`${classes.reviewsCircleImage} ${isAnimating ? (direction > 0 ? classes.slideEnterFromRight : classes.slideEnterFromLeft) : classes.slideStatic}`}
