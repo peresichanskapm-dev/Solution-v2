@@ -48,9 +48,18 @@
 	aspect-ratio: 345 / 192;
 	overflow: hidden;
 	border-radius: px-to-vw(18, 1440);
+	cursor: pointer;
 }
 
-.focusCardPhoto {
+.focusCardImage:focus-visible {
+	outline: 2px solid rgba(255, 255, 255, 0.92);
+	outline-offset: px-to-vw(4, 1440);
+}
+
+.focusCardVideo {
+	display: block;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 }
 
@@ -67,15 +76,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	pointer-events: none;
 }
 
-.playButton span {
-	width: 0;
-	height: 0;
-	border-top: px-to-vw(10, 1440) solid transparent;
-	border-bottom: px-to-vw(10, 1440) solid transparent;
-	border-left: px-to-vw(16, 1440) solid #fff;
-	margin-left: px-to-vw(3, 1440);
+.playButton svg {
+	width: px-to-vw(28, 1440);
+	height: px-to-vw(28, 1440);
+	fill: #fff;
+	transform: translateX(px-to-vw(1.5, 1440));
 }
 
 @media screen and (max-width: $brakePointMobile) {
@@ -100,8 +108,18 @@
 		border-radius: px-to-vw(10, 390);
 	}
 
+	.focusCardImage:focus-visible {
+		outline-offset: px-to-vw(2, 390);
+	}
+
 	.playButton {
 		width: px-to-vw(61, 390);
 		height: px-to-vw(61, 390);
+	}
+
+	.playButton svg {
+		width: px-to-vw(34, 390);
+		height: px-to-vw(34, 390);
+		transform: translateX(px-to-vw(2, 390));
 	}
 }
