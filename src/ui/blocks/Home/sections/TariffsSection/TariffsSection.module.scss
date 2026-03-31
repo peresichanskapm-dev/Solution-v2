@@ -1,6 +1,6 @@
 ﻿.tariffs {
 	position: relative;
-	min-height: px-to-vw(940, 1440);
+	min-height: px-to-vw(972, 1440);
 	background: #dfddd3;
 	overflow: hidden;
 	color: #191919;
@@ -9,7 +9,7 @@
 .tariffsMeta {
 	position: absolute;
 	left: px-to-vw(629, 1440);
-	top: px-to-vw(-43, 1440);
+	top: px-to-vw(32, 1440);
 	width: px-to-vw(182, 1440);
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
@@ -23,7 +23,7 @@
 .tariffsTitle {
 	position: absolute;
 	left: px-to-vw(542, 1440);
-	top: 0;
+	top: px-to-vw(64, 1440);
 	width: px-to-vw(356, 1440);
 	font-family: var(--font-tenor);
 	font-size: px-to-vw(40, 1440);
@@ -36,7 +36,7 @@
 .tariffsLead {
 	position: absolute;
 	left: px-to-vw(536, 1440);
-	top: px-to-vw(106, 1440);
+	top: px-to-vw(166, 1440);
 	width: px-to-vw(368, 1440);
 	font-family: var(--font-inter);
 	font-size: px-to-vw(20, 1440);
@@ -57,17 +57,17 @@
 
 .programCardOne {
 	left: px-to-vw(70, 1440);
-	top: px-to-vw(214, 1440);
+	top: px-to-vw(244, 1440);
 }
 
 .programCardTwo {
 	left: px-to-vw(520, 1440);
-	top: px-to-vw(214, 1440);
+	top: px-to-vw(244, 1440);
 }
 
 .programCardThree {
 	left: px-to-vw(970, 1440);
-	top: px-to-vw(214, 1440);
+	top: px-to-vw(244, 1440);
 }
 
 .programImageWrap {
@@ -125,7 +125,7 @@
 .tariffsPrice {
 	position: absolute;
 	left: px-to-vw(676, 1440);
-	top: px-to-vw(747, 1440);
+	top: px-to-vw(767, 1440);
 	width: px-to-vw(88, 1440);
 	font-family: var(--font-inter);
 	font-size: px-to-vw(22, 1440);
@@ -139,7 +139,7 @@
 .tariffsButton {
 	position: absolute;
 	left: px-to-vw(635, 1440);
-	top: px-to-vw(787, 1440);
+	top: px-to-vw(807, 1440);
 	width: px-to-vw(171, 1440);
 	height: px-to-vw(39, 1440);
 	display: flex;
@@ -157,6 +157,7 @@
 	text-transform: uppercase;
 	color: #f5f5f5;
 	cursor: pointer;
+	white-space: nowrap;
 }
 
 @media screen and (max-width: $brakePointMobile) {
