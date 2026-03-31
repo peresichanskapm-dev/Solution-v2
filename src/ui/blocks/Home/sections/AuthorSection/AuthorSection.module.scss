@@ -17,11 +17,32 @@
 	position: absolute;
 }
 
+.decorAsset {
+	object-fit: fill;
+}
+
+.portraitAsset {
+	object-fit: cover;
+}
+
 .decorOuterDesktop {
 	left: px-to-vw(14, 1440);
 	top: px-to-vw(46, 1440);
 	width: px-to-vw(651.082, 1440);
 	height: px-to-vw(650.582, 1440);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.decorOuterDesktopRotate {
+	transform: rotate(106.88deg);
+}
+
+.decorOuterDesktopInner {
+	position: relative;
+	width: px-to-vw(521.427, 1440);
+	height: px-to-vw(522.177, 1440);
 }
 
 .decorMiddleDesktop {
@@ -29,6 +50,19 @@
 	top: px-to-vw(140.49, 1440);
 	width: px-to-vw(463.51, 1440);
 	height: px-to-vw(462.952, 1440);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.decorMiddleDesktopRotate {
+	transform: rotate(-95.04deg);
+}
+
+.decorMiddleDesktopInner {
+	position: relative;
+	width: px-to-vw(427.04, 1440);
+	height: px-to-vw(427.654, 1440);
 }
 
 .portraitDesktop {
@@ -36,6 +70,22 @@
 	top: px-to-vw(185.26, 1440);
 	width: px-to-vw(369.969, 1440);
 	height: px-to-vw(370.477, 1440);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.portraitDesktopRotate {
+	transform: rotate(1.35deg);
+	opacity: 0.9;
+}
+
+.portraitDesktopInner {
+	position: relative;
+	width: px-to-vw(361.526, 1440);
+	height: px-to-vw(362.047, 1440);
+	border-radius: 50%;
+	overflow: hidden;
 }
 
 .decorOuterMobile,
@@ -62,11 +112,7 @@
 }
 
 .authorIcon {
-	width: 1280.43% !important;
-	height: 637.14% !important;
-	max-width: none;
-	left: -595.65% !important;
-	top: -186.67% !important;
+	object-fit: contain;
 }
 
 .authorName {
@@ -106,6 +152,7 @@
 .authorMottoMobile {
 	position: absolute;
 	margin: 0;
+	font-style: normal;
 }
 
 .authorLeadIntro,
@@ -234,26 +281,68 @@
 		display: block;
 	}
 
-	.decorOuterMobile {
-		left: px-to-vw(45, 390);
-		top: px-to-vw(134, 390);
-		width: px-to-vw(299.23, 390);
-		height: px-to-vw(299, 390);
-	}
+.decorOuterMobile {
+	left: px-to-vw(45, 390);
+	top: px-to-vw(134, 390);
+	width: px-to-vw(299.23, 390);
+	height: px-to-vw(299, 390);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-	.decorMiddleMobile {
-		left: px-to-vw(88.4, 390);
-		top: px-to-vw(177.43, 390);
-		width: px-to-vw(213.024, 390);
-		height: px-to-vw(212.767, 390);
-	}
+.decorOuterMobileRotate {
+	transform: rotate(106.88deg);
+}
 
-	.portraitMobile {
-		left: px-to-vw(111.13, 390);
-		top: px-to-vw(198, 390);
-		width: px-to-vw(170.034, 390);
-		height: px-to-vw(170.267, 390);
-	}
+.decorOuterMobileInner {
+	position: relative;
+	width: px-to-vw(239.642, 390);
+	height: px-to-vw(239.986, 390);
+}
+
+.decorMiddleMobile {
+	left: px-to-vw(88.4, 390);
+	top: px-to-vw(177.43, 390);
+	width: px-to-vw(213.024, 390);
+	height: px-to-vw(212.767, 390);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.decorMiddleMobileRotate {
+	transform: rotate(-95.04deg);
+}
+
+.decorMiddleMobileInner {
+	position: relative;
+	width: px-to-vw(196.262, 390);
+	height: px-to-vw(196.545, 390);
+}
+
+.portraitMobile {
+	left: px-to-vw(111.13, 390);
+	top: px-to-vw(198, 390);
+	width: px-to-vw(170.034, 390);
+	height: px-to-vw(170.267, 390);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.portraitMobileRotate {
+	transform: rotate(1.35deg);
+	opacity: 0.9;
+}
+
+.portraitMobileInner {
+	position: relative;
+	width: px-to-vw(166.153, 390);
+	height: px-to-vw(166.392, 390);
+	border-radius: 50%;
+	overflow: hidden;
+}
 
 	.authorHead {
 		left: px-to-vw(25, 390);
