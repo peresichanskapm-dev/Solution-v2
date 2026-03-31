@@ -7,7 +7,7 @@
 
 .howLeft {
 	position: absolute;
-	left: px-to-vw(70, 1440);
+	left: px-to-vw(45, 1440);
 	top: px-to-vw(115, 1440);
 	z-index: 3;
 	width: px-to-vw(429, 1440);
@@ -48,7 +48,7 @@
 
 .howLineWrap {
 	position: absolute;
-	left: px-to-vw(75, 1440);
+	left: px-to-vw(45, 1440);
 	top: px-to-vw(273, 1440);
 	width: px-to-vw(614, 1440);
 	height: px-to-vw(369, 1440);
@@ -63,7 +63,7 @@
 
 .howCards {
 	position: absolute;
-	left: px-to-vw(730, 1440);
+	left: px-to-vw(705, 1440);
 	top: px-to-vw(110, 1440);
 	width: px-to-vw(664, 1440);
 	z-index: 2;
@@ -154,6 +154,7 @@
 .howCardBottomRight {
 	height: px-to-vw(350, 1440);
 	transform: translate(px-to-vw(-22, 1440), px-to-vw(-22, 1440));
+	padding: px-to-vw(24, 1440);
 }
 
 .howCardBottom .howIconSmall {
@@ -295,6 +296,7 @@
 
 	.howCardBottomRight {
 		transform: none;
+		padding: px-to-vw(0, 390);
 	}
 
 	.howCardBottom .howShape {
