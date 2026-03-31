@@ -36,17 +36,6 @@
 	position: relative;
 }
 
-.canvas > *::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	width: 100vw;
-	transform: translateX(-50%);
-	border-bottom: 1px solid #000;
-	pointer-events: none;
-}
-
 @media screen and (max-width: $brakePointMobile) {
 	.canvas {
 		width: px-to-vw(370, 390);

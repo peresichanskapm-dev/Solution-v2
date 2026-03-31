@@ -14,6 +14,15 @@ export default function AudienceSection() {
 				/>
 			</div>
 			<div className={classes.audienceOverlay} />
+			<div className={classes.audienceMask} aria-hidden="true">
+				<Image
+					src="/media/home/solutionMask.png"
+					alt=""
+					fill
+					sizes="(max-width: 768px) 100vw, 96vw"
+					className={classes.audienceMaskImage}
+				/>
+			</div>
 
 			<Image src="/media/home/audienceLineTopLeft.png" alt="" width={251} height={159} className={classes.audienceLineTopLeft} />
 			<Image src="/media/home/audienceLineTopRight.png" alt="" width={413} height={155} className={classes.audienceLineTopRight} />

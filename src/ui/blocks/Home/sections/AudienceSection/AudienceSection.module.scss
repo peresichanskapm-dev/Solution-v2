@@ -6,12 +6,13 @@
 }
 
 .audienceBackground,
-.audienceOverlay {
+.audienceOverlay,
+.audienceMask {
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: px-to-vw(839, 1440);
+	height: 100%;
 }
 
 .audienceBackgroundImage {
@@ -26,6 +27,16 @@
 .audienceOverlay {
 	background: rgba(0, 0, 0, 0.35);
 	z-index: 1;
+}
+
+.audienceMask {
+	z-index: 2;
+	pointer-events: none;
+}
+
+.audienceMaskImage {
+	object-fit: cover;
+	object-position: center top;
 }
 
 .audienceOverlay::after {
@@ -165,7 +176,8 @@
 	}
 
 	.audienceBackground,
-	.audienceOverlay {
+	.audienceOverlay,
+	.audienceMask {
 		height: px-to-vw(769, 390);
 	}
 
