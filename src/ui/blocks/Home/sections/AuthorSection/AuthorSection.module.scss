@@ -5,6 +5,17 @@
 	overflow: hidden;
 }
 
+.author::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 100vw;
+	transform: translateX(-50%);
+	border-top: 1px solid #000;
+	pointer-events: none;
+}
+
 .decorOuterDesktop,
 .decorMiddleDesktop,
 .portraitDesktop,
