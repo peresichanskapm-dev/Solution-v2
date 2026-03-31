@@ -17,6 +17,7 @@ const reviewSlides = [
 const transitionDurationMs = 550;
 const slideImageQuality = 100;
 const swipeThresholdPx = 40;
+const criticalPreloadIndexes = [1, reviewSlides.length - 1];
 
 export default function ReviewsSection() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -112,6 +113,12 @@ export default function ReviewsSection() {
 
 	return (
 		<section className={classes.reviews}>
+			<div className={classes.reviewsPreload} aria-hidden="true">
+				{criticalPreloadIndexes.map((index) => (
+					<Image key={reviewSlides[index].src} src={reviewSlides[index].src} alt="" width={1} height={1} priority loading="eager" quality={slideImageQuality} sizes="1px" className={classes.reviewsPreloadImage} />
+				))}
+			</div>
+
 			<div className={classes.reviewsBackground}>
 				<Image src="/media/home/reviewsBackgroundDesktop.png" alt="Forest" fill sizes="(max-width: 768px) 100vw, 1388px" className={classes.reviewsBackgroundImage} />
 			</div>

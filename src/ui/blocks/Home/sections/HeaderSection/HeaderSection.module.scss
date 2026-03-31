@@ -73,6 +73,7 @@
 	.header {
 		height: px-to-vw(50, 390);
 		padding-inline: px-to-vw(10, 390);
+		justify-content: space-between;
 	}
 
 	.headerOpen .menuButton :global(img) {
