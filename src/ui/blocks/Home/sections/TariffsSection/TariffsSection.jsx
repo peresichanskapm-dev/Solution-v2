@@ -3,27 +3,19 @@ import classes from "./TariffsSection.module.scss";
 
 const programs = [
 	{
-		cardClass: "programCardOne",
 		id: "I",
-		nameClass: "programNameOne",
-		imageWrapClass: "programImageWrapOne",
-		name: "відновлення ресурсу",
+		text: "Ти починаєш помічати момент,\nде думка стає реакцією",
+		// Повернули старі назви файлів, поки ти не експортуєш нові кола з Фігми
 		image: "/media/home/programRecovery.png",
 	},
 	{
-		cardClass: "programCardTwo",
 		id: "II",
-		nameClass: "programNameTwo",
-		imageWrapClass: "programImageWrapTwo",
-		name: "повернення внутрішнього центру",
+		text: "Фонова напруга перестає\nкерувати реакціями.",
 		image: "/media/home/programCenter.png",
 	},
 	{
-		cardClass: "programCardThree",
 		id: "III",
-		nameClass: "programNameThree",
-		imageWrapClass: "programImageWrapThree",
-		name: "дія без напруги",
+		text: "Програма повертає тебе в\nстан, з якого рішення інші.",
 		image: "/media/home/programPower.png",
 	},
 ];
@@ -31,24 +23,56 @@ const programs = [
 export default function TariffsSection() {
 	return (
 		<section id="tariffs" className={classes.tariffs}>
-			<p className={classes.tariffsMeta}>( перший набір )</p>
-			<h2 className={classes.tariffsTitle}>Solar Activation — вхід у SOLUTION</h2>
-			<p className={classes.tariffsLead}>3 аудіопрограми для повернення енергії, центру й сили.</p>
+			<div className={classes.header}>
+				<h2 className={classes.title}>
+					Base Mode —<br />
+					точка вибору
+				</h2>
+				<p className={classes.subtitle}>
+					Без паузи між думкою та реакцією будь-яка робота над собою — лише
+					<br />
+					спроба виправити скоєне. Base Mode змінює момент старту твоєї реакції.
+				</p>
+			</div>
 
-			<div className={classes.programs}>
+			<div className={classes.programsGrid}>
 				{programs.map((program) => (
-					<article key={program.id} className={`${classes.programCard} ${classes[program.cardClass]}`}>
-						<div className={`${classes.programImageWrap} ${classes[program.imageWrapClass]}`}>
-							<Image src={program.image} alt={program.name} fill sizes="(max-width: 768px) 75vw, 400px" className={classes.programImage} />
+					<article key={program.id} className={classes.programCard}>
+						<div className={classes.programImageWrap}>
+							<Image
+								src={program.image}
+								alt={`Program ${program.id}`}
+								fill
+								sizes="(max-width: 768px) 80vw, 33vw"
+								className={classes.programImage}
+							/>
+							<span className={classes.programIndex}>{program.id}</span>
 						</div>
-						<span className={classes.programIndex}>{program.id}</span>
-						<p className={`${classes.programName} ${classes[program.nameClass]}`}>{program.name}</p>
+						<p className={classes.programText}>
+							{program.text.split("\n").map((line, i) => (
+								<span key={i}>
+									{line}
+									<br />
+								</span>
+							))}
+						</p>
 					</article>
 				))}
 			</div>
 
-			<p className={classes.tariffsPrice}>999 грн</p>
-			<button className={classes.tariffsButton}>ПРидбати пакет</button>
+			<div className={classes.dailyStories}>
+				<h3 className={classes.dailyTitle}>+ Daily Stories</h3>
+				<p className={classes.dailyText}>
+					короткі щоденні практики у форматі живих ситуацій. Ти тренуєш
+					<br />
+					момент, який у житті зазвичай пропускаєш.
+				</p>
+			</div>
+
+			<p className={classes.price}>999 ГРН</p>
+			<button type="button" className={classes.button}>
+				Придбати пакет
+			</button>
 		</section>
 	);
 }

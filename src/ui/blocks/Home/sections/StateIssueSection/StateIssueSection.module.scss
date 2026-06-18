@@ -2,43 +2,47 @@
 	position: relative;
 	min-height: px-to-vw(1045, 1440);
 	background: #dfddd3;
-	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: px-to-vw(120, 1440);
+	padding-bottom: px-to-vw(120, 1440);
 }
 
-.issueText {
-	position: absolute;
-	top: px-to-vw(110, 1440);
-	left: px-to-vw(536, 1440);
-	width: px-to-vw(318, 1440);
-	z-index: 2;
+.topText {
+	text-align: center;
+	margin-bottom: px-to-vw(60, 1440);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.sectionTitle {
-	width: px-to-vw(309, 1440);
+.topTitle {
 	font-family: var(--font-tenor);
 	font-size: px-to-vw(40, 1440);
 	font-weight: 400;
-	line-height: 1.075;
+	line-height: 1.15;
 	letter-spacing: px-to-vw(-1.2, 1440);
+	color: #000;
+	margin: 0 0 px-to-vw(20, 1440) 0;
 }
 
-.issueParagraph {
-	margin-top: px-to-vw(25, 1440);
-	width: px-to-vw(318, 1440);
+.topParagraph {
 	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 400;
-	line-height: 1.210227;
-	color: #1f1f1f;
-	text-align: justify;
+	font-size: px-to-vw(18, 1440);
+	font-weight: 300;
+	line-height: 1.4;
+	color: #000;
+	margin: 0;
+	text-align: center;
 }
 
 .issueDiagram {
-	position: absolute;
-	top: px-to-vw(424, 1440);
-	left: px-to-vw(414, 1440);
+	position: relative;
 	width: px-to-vw(561, 1440);
 	height: px-to-vw(561, 1440);
+	margin-bottom: px-to-vw(70, 1440);
 }
 
 .issueDiagramImage {
@@ -48,44 +52,84 @@
 	object-fit: contain;
 }
 
+.bottomText {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.bottomTitle {
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(35, 1440);
+	font-weight: 400;
+	line-height: 1.15;
+	letter-spacing: px-to-vw(-1.05, 1440);
+	color: #000;
+	margin: 0 0 px-to-vw(15, 1440) 0;
+}
+
+.bottomParagraph {
+	font-family: var(--font-inter);
+	font-size: px-to-vw(18, 1440);
+	font-weight: 300;
+	line-height: 1.4;
+	color: #000;
+	margin: 0;
+	text-align: center;
+}
+
 @media screen and (max-width: $brakePointMobile) {
 	.stateIssue {
-		min-height: px-to-vw(719, 390);
-		padding: 0;
+		min-height: auto;
+		padding-top: px-to-vw(100, 390);
+		padding-bottom: px-to-vw(100, 390);
 	}
 
-	.issueText {
-		position: absolute;
-		top: px-to-vw(70, 390);
-		left: px-to-vw(77, 390);
-		width: px-to-vw(217, 390);
-		margin-left: 0;
+	.topText {
+		margin-bottom: px-to-vw(45, 390);
+		/* Робимо вужчий блок для правильних переносів */
+		width: px-to-vw(245, 390);
+		/* Вирівнюємо вміст блоку по лівому краю */
+		align-items: flex-start;
 	}
 
-	.sectionTitle {
+	.topTitle {
 		font-size: px-to-vw(25, 390);
-		line-height: 1.08;
 		letter-spacing: px-to-vw(-0.75, 390);
-		width: px-to-vw(183, 390);
-	}
-
-	.issueParagraph {
-		margin-top: px-to-vw(20, 390);
-		width: px-to-vw(217, 390);
-		font-size: px-to-vw(14, 390);
-		line-height: 1;
-		color: #000;
-		opacity: 0.8;
+		margin-bottom: px-to-vw(20, 390);
 		text-align: left;
 	}
 
+	.topParagraph {
+		font-size: px-to-vw(14, 390);
+		text-align: left;
+		line-height: 1.35;
+	}
+
 	.issueDiagram {
-		position: absolute;
-		top: px-to-vw(311, 390);
-		left: px-to-vw(3, 390);
-		width: px-to-vw(363, 390);
-		height: px-to-vw(363, 390);
-		margin-top: 0;
-		transform: none;
+		width: px-to-vw(320, 390);
+		height: px-to-vw(320, 390);
+		margin-bottom: px-to-vw(50, 390);
+	}
+
+	.bottomText {
+		/* Робимо вужчий блок для правильних переносів */
+		width: px-to-vw(245, 390);
+		/* Вирівнюємо вміст блоку по лівому краю */
+		align-items: flex-start;
+	}
+
+	.bottomTitle {
+		font-size: px-to-vw(25, 390);
+		letter-spacing: px-to-vw(-0.75, 390);
+		margin-bottom: px-to-vw(20, 390);
+		text-align: left;
+	}
+
+	.bottomParagraph {
+		font-size: px-to-vw(14, 390);
+		text-align: left;
+		line-height: 1.35;
 	}
 }

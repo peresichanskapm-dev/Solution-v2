@@ -1,20 +1,30 @@
 .author {
 	position: relative;
-	min-height: px-to-vw(807, 1440);
 	background: #dfddd3;
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	padding: px-to-vw(120, 1440) 0;
 }
 
-.decorOuterDesktop,
-.decorMiddleDesktop,
-.portraitDesktop,
-.decorOuterMobile,
-.decorMiddleMobile,
-.portraitMobile,
-.quoteBubbleDesktop,
-.quoteBubbleMobile,
-.authorIconWrap {
-	position: absolute;
+.authorWrap {
+	width: 100%;
+	max-width: px-to-vw(1280, 1440);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: px-to-vw(40, 1440);
+	padding-inline: px-to-vw(70, 1440);
+}
+
+.visuals {
+	position: relative;
+	width: px-to-vw(651, 1440);
+	height: px-to-vw(651, 1440);
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .decorAsset {
@@ -25,68 +35,26 @@
 	object-fit: cover;
 }
 
-.decorOuterDesktop {
-	left: px-to-vw(14, 1440);
-	top: px-to-vw(46, 1440);
-	width: px-to-vw(651.082, 1440);
-	height: px-to-vw(650.582, 1440);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.decorOuterDesktopRotate {
-	transform: rotate(106.88deg);
-}
-
-.decorOuterDesktopInner {
-	position: relative;
-	width: px-to-vw(521.427, 1440);
-	height: px-to-vw(522.177, 1440);
-}
-
-.decorMiddleDesktop {
-	left: px-to-vw(108.44, 1440);
-	top: px-to-vw(140.49, 1440);
-	width: px-to-vw(463.51, 1440);
-	height: px-to-vw(462.952, 1440);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.decorMiddleDesktopRotate {
-	transform: rotate(-95.04deg);
-}
-
-.decorMiddleDesktopInner {
-	position: relative;
-	width: px-to-vw(427.04, 1440);
-	height: px-to-vw(427.654, 1440);
-}
-
+.decorOuterDesktop,
+.decorMiddleDesktop,
 .portraitDesktop {
-	left: px-to-vw(157.88, 1440);
-	top: px-to-vw(185.26, 1440);
-	width: px-to-vw(369.969, 1440);
-	height: px-to-vw(370.477, 1440);
+	position: absolute;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.portraitDesktopRotate {
-	transform: rotate(1.35deg);
-	opacity: 0.9;
-}
+.decorOuterDesktop { width: 100%; height: 100%; }
+.decorOuterDesktopRotate { transform: rotate(106.88deg); }
+.decorOuterDesktopInner { position: relative; width: px-to-vw(521.427, 1440); height: px-to-vw(522.177, 1440); }
 
-.portraitDesktopInner {
-	position: relative;
-	width: px-to-vw(361.526, 1440);
-	height: px-to-vw(362.047, 1440);
-	border-radius: 50%;
-	overflow: hidden;
-}
+.decorMiddleDesktop { width: px-to-vw(463.51, 1440); height: px-to-vw(462.952, 1440); }
+.decorMiddleDesktopRotate { transform: rotate(-95.04deg); }
+.decorMiddleDesktopInner { position: relative; width: px-to-vw(427.04, 1440); height: px-to-vw(427.654, 1440); }
+
+.portraitDesktop { width: px-to-vw(369.969, 1440); height: px-to-vw(370.477, 1440); }
+.portraitDesktopRotate { transform: rotate(1.35deg); opacity: 0.9; }
+.portraitDesktopInner { position: relative; width: px-to-vw(361.526, 1440); height: px-to-vw(362.047, 1440); border-radius: 50%; overflow: hidden; }
 
 .decorOuterMobile,
 .decorMiddleMobile,
@@ -94,21 +62,24 @@
 	display: none;
 }
 
+.content {
+	display: flex;
+	flex-direction: column;
+	width: px-to-vw(550, 1440);
+}
+
 .authorHead {
-	position: absolute;
-	left: px-to-vw(651.289, 1440);
-	top: px-to-vw(114.213, 1440);
-	width: px-to-vw(351, 1440);
 	display: flex;
 	align-items: center;
+	gap: px-to-vw(15, 1440);
+	margin-bottom: px-to-vw(5, 1440);
 }
 
 .authorIconWrap {
-	left: 0;
-	top: px-to-vw(6, 1440);
+	position: relative;
 	width: px-to-vw(27, 1440);
 	height: px-to-vw(31, 1440);
-	overflow: hidden;
+	flex-shrink: 0;
 }
 
 .authorIcon {
@@ -116,318 +87,192 @@
 }
 
 .authorName {
-	width: px-to-vw(324, 1440);
-	margin: 0 0 0 px-to-vw(27, 1440);
 	font-family: var(--font-tenor);
 	font-size: px-to-vw(45, 1440);
 	font-weight: 400;
-	line-height: px-to-vw(43, 1440);
-	letter-spacing: px-to-vw(-1.35, 1440);
-	text-align: center;
+	line-height: 1.1;
 	color: #000;
+	margin: 0;
+	letter-spacing: px-to-vw(-1.35, 1440);
 }
 
 .authorRole {
-	position: absolute;
-	left: px-to-vw(690.289, 1440);
-	top: px-to-vw(164.213, 1440);
-	width: px-to-vw(285, 1440);
-	margin: 0;
-	font-family: var(--font-tenor);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 400;
-	line-height: px-to-vw(25, 1440);
-	letter-spacing: px-to-vw(-0.6, 1440);
-	text-align: center;
-	color: #6a695d;
-}
-
-.authorLeadIntro,
-.authorLeadJourney,
-.authorQuote,
-.authorBio,
-.authorTodayDesktop,
-.authorTodayMobile,
-.authorMottoDesktop,
-.authorMottoMobile {
-	position: absolute;
-	margin: 0;
-	font-style: normal;
-}
-
-.authorLeadIntro,
-.authorLeadJourney {
-	left: px-to-vw(651.289, 1440);
-	width: px-to-vw(581, 1440);
 	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
+	font-size: px-to-vw(18, 1440);
 	font-weight: 400;
-	line-height: px-to-vw(25, 1440);
-	letter-spacing: px-to-vw(-0.6, 1440);
+	color: #6a695d;
+	margin: 0 0 px-to-vw(45, 1440) 0;
+	margin-left: px-to-vw(42, 1440);
+}
+
+.textBold {
+	font-family: var(--font-inter);
+	font-size: px-to-vw(18, 1440);
+	font-weight: 500;
+	line-height: 1.4;
 	color: #000;
+	margin: 0 0 px-to-vw(25, 1440) 0;
 }
 
-.authorLeadIntro {
-	top: px-to-vw(221.213, 1440);
+.textRegular {
+	font-family: var(--font-inter);
+	font-size: px-to-vw(16, 1440);
+	font-weight: 300;
+	line-height: 1.4;
+	color: #000;
+	opacity: 0.8;
+	margin: 0 0 px-to-vw(40, 1440) 0;
 }
 
-.authorLeadJourney {
-	top: px-to-vw(296.213, 1440);
-}
-
-.quoteBubbleDesktop {
-	left: px-to-vw(859.289, 1440);
-	top: px-to-vw(386.213, 1440);
+.quoteBox {
+	position: relative;
 	width: px-to-vw(498, 1440);
 	height: px-to-vw(115, 1440);
+	margin-bottom: px-to-vw(45, 1440);
+	margin-left: px-to-vw(30, 1440);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: px-to-vw(20, 1440) px-to-vw(30, 1440);
 }
 
-.quoteBubbleMobile {
-	display: none;
+.quoteBg {
+	object-fit: fill;
+	z-index: 1;
 }
 
-.authorQuote {
-	left: px-to-vw(873.289, 1440);
-	top: px-to-vw(403.213, 1440);
-	width: px-to-vw(466, 1440);
-	font-family: var(--font-tenor);
-	font-size: px-to-vw(18, 1440);
+.quoteBgDesktop { display: block; }
+.quoteBgMobile { display: none; }
+
+.quoteText {
+	position: relative;
+	z-index: 2;
+	font-family: var(--font-inter);
+	font-size: px-to-vw(15, 1440);
 	font-weight: 400;
-	line-height: normal;
-	text-align: justify;
-	white-space: pre-wrap;
-	opacity: 0.8;
 	color: #000;
+	line-height: 1.4;
+	margin: 0;
+	text-align: left;
+	opacity: 0.9;
 }
 
-.authorBio {
-	left: px-to-vw(652.289, 1440);
-	top: px-to-vw(517.213, 1440);
-	width: px-to-vw(631, 1440);
+.footerTextWrap {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.footerText {
 	font-family: var(--font-inter);
-	font-size: px-to-vw(18, 1440);
-	font-weight: 400;
-	line-height: px-to-vw(25, 1440);
-	letter-spacing: px-to-vw(-0.54, 1440);
-	color: #191919;
-}
-
-.authorTodayDesktop,
-.authorTodayMobile {
-	left: px-to-vw(652.289, 1440);
-	width: px-to-vw(442, 1440);
-	font-family: var(--font-inter);
-	font-size: px-to-vw(18, 1440);
-	font-weight: 400;
-	line-height: px-to-vw(25, 1440);
-	letter-spacing: px-to-vw(-0.54, 1440);
-	color: #2b2b28;
-}
-
-.authorTodayDesktop {
-	top: px-to-vw(607.213, 1440);
-}
-
-.authorTodayMobile {
-	display: none;
-}
-
-.authorTodayLabel {
-	font-family: var(--font-tenor);
-}
-
-.authorMottoDesktop,
-.authorMottoMobile {
-	font-family: var(--font-tenor);
-	font-weight: 400;
-	opacity: 0.8;
-	color: #6a695d;
-	text-align: justify;
-}
-
-.authorMottoDesktop {
-	left: px-to-vw(947.289, 1440);
-	top: px-to-vw(647.213, 1440);
-	width: px-to-vw(330, 1440);
-	font-size: px-to-vw(16, 1440);
-	line-height: normal;
-	white-space: pre-wrap;
-}
-
-.authorMottoMobile {
-	display: none;
+	font-size: px-to-vw(14, 1440);
+	font-weight: 300;
+	color: #000;
+	opacity: 0.5;
+	text-align: left;
+	line-height: 1.4;
+	margin: 0;
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.author {
-		min-height: px-to-vw(997, 390);
+		padding: px-to-vw(80, 390) 0;
+	}
+
+	.authorWrap {
+		flex-direction: column;
+		padding-inline: px-to-vw(25, 390);
+		gap: px-to-vw(40, 390);
+	}
+
+	.visuals {
+		width: px-to-vw(299, 390);
+		height: px-to-vw(299, 390);
 	}
 
 	.decorOuterDesktop,
 	.decorMiddleDesktop,
-	.portraitDesktop,
-	.quoteBubbleDesktop,
-	.authorTodayDesktop,
-	.authorMottoDesktop {
+	.portraitDesktop {
 		display: none;
 	}
 
 	.decorOuterMobile,
 	.decorMiddleMobile,
-	.portraitMobile,
-	.quoteBubbleMobile,
-	.authorTodayMobile,
-	.authorMottoMobile {
-		display: block;
+	.portraitMobile {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
-.decorOuterMobile {
-	left: px-to-vw(45, 390);
-	top: px-to-vw(134, 390);
-	width: px-to-vw(299.23, 390);
-	height: px-to-vw(299, 390);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+	.decorOuterMobile { width: 100%; height: 100%; }
+	.decorOuterMobileRotate { transform: rotate(106.88deg); }
+	.decorOuterMobileInner { position: relative; width: px-to-vw(239.642, 390); height: px-to-vw(239.986, 390); }
 
-.decorOuterMobileRotate {
-	transform: rotate(106.88deg);
-}
+	.decorMiddleMobile { width: px-to-vw(213.024, 390); height: px-to-vw(212.767, 390); }
+	.decorMiddleMobileRotate { transform: rotate(-95.04deg); }
+	.decorMiddleMobileInner { position: relative; width: px-to-vw(196.262, 390); height: px-to-vw(196.545, 390); }
 
-.decorOuterMobileInner {
-	position: relative;
-	width: px-to-vw(239.642, 390);
-	height: px-to-vw(239.986, 390);
-}
+	.portraitMobile { width: px-to-vw(170.034, 390); height: px-to-vw(170.267, 390); }
+	.portraitMobileRotate { transform: rotate(1.35deg); opacity: 0.9; }
+	.portraitMobileInner { position: relative; width: px-to-vw(166.153, 390); height: px-to-vw(166.392, 390); border-radius: 50%; overflow: hidden; }
 
-.decorMiddleMobile {
-	left: px-to-vw(88.4, 390);
-	top: px-to-vw(177.43, 390);
-	width: px-to-vw(213.024, 390);
-	height: px-to-vw(212.767, 390);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.decorMiddleMobileRotate {
-	transform: rotate(-95.04deg);
-}
-
-.decorMiddleMobileInner {
-	position: relative;
-	width: px-to-vw(196.262, 390);
-	height: px-to-vw(196.545, 390);
-}
-
-.portraitMobile {
-	left: px-to-vw(111.13, 390);
-	top: px-to-vw(198, 390);
-	width: px-to-vw(170.034, 390);
-	height: px-to-vw(170.267, 390);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.portraitMobileRotate {
-	transform: rotate(1.35deg);
-	opacity: 0.9;
-}
-
-.portraitMobileInner {
-	position: relative;
-	width: px-to-vw(166.153, 390);
-	height: px-to-vw(166.392, 390);
-	border-radius: 50%;
-	overflow: hidden;
-}
+	.content {
+		width: 100%;
+	}
 
 	.authorHead {
-		left: px-to-vw(25, 390);
-		top: px-to-vw(76, 390);
-		width: px-to-vw(201, 390);
+		gap: px-to-vw(10, 390);
 	}
 
 	.authorIconWrap {
-		top: px-to-vw(8, 390);
-		width: px-to-vw(23, 390);
-		height: px-to-vw(27, 390);
+		width: px-to-vw(18, 390);
+		height: px-to-vw(21, 390);
 	}
 
 	.authorName {
-		width: px-to-vw(174, 390);
-		margin-left: px-to-vw(23, 390);
-		font-size: px-to-vw(25, 390);
-		line-height: px-to-vw(43, 390);
-		letter-spacing: px-to-vw(-0.75, 390);
+		font-size: px-to-vw(28, 390);
+		letter-spacing: px-to-vw(-0.84, 390);
 	}
 
 	.authorRole {
-		left: px-to-vw(25, 390);
-		top: px-to-vw(111, 390);
-		width: px-to-vw(214, 390);
+		font-size: px-to-vw(14, 390);
+		margin: 0 0 px-to-vw(30, 390) 0;
+		margin-left: px-to-vw(28, 390);
+	}
+
+	.textBold {
 		font-size: px-to-vw(15, 390);
-		line-height: px-to-vw(25, 390);
-		letter-spacing: px-to-vw(-0.45, 390);
+		margin: 0 0 px-to-vw(20, 390) 0;
 	}
 
-	.authorLeadIntro,
-	.authorLeadJourney {
-		left: px-to-vw(25, 390);
-		width: px-to-vw(340, 390);
-		font-size: px-to-vw(15, 390);
-		line-height: px-to-vw(22, 390);
-		letter-spacing: px-to-vw(-0.45, 390);
+	.textRegular {
+		font-size: px-to-vw(14, 390);
+		margin: 0 0 px-to-vw(30, 390) 0;
 	}
 
-	.authorLeadIntro {
-		top: px-to-vw(425, 390);
-	}
-
-	.authorLeadJourney {
-		top: px-to-vw(502, 390);
-	}
-
-	.quoteBubbleMobile {
-		left: px-to-vw(64, 390);
-		top: px-to-vw(612, 390);
+	.quoteBox {
 		width: px-to-vw(301, 390);
 		height: px-to-vw(88, 390);
+		margin-left: 0;
+		margin-bottom: px-to-vw(30, 390);
+		padding: px-to-vw(15, 390) px-to-vw(20, 390);
+		align-self: center;
 	}
 
-	.authorQuote {
-		left: px-to-vw(75, 390);
-		top: px-to-vw(627, 390);
-		width: px-to-vw(274, 390);
+	.quoteBgDesktop { display: none; }
+	.quoteBgMobile { display: block; }
+
+	.quoteText {
 		font-size: px-to-vw(12, 390);
-		line-height: normal;
+		top: px-to-vw(-5, 390);
 	}
 
-	.authorBio {
-		left: px-to-vw(25, 390);
-		top: px-to-vw(722, 390);
-		width: px-to-vw(340, 390);
-		font-size: px-to-vw(14, 390);
-		line-height: px-to-vw(20, 390);
-		letter-spacing: px-to-vw(-0.42, 390);
+	.footerTextWrap {
+		justify-content: flex-start;
 	}
 
-	.authorTodayMobile {
-		left: px-to-vw(25, 390);
-		top: px-to-vw(817, 390);
-		width: px-to-vw(340, 390);
-		font-size: px-to-vw(14, 390);
-		line-height: px-to-vw(20, 390);
-		letter-spacing: px-to-vw(-0.42, 390);
-	}
-
-	.authorMottoMobile {
-		left: px-to-vw(118, 390);
-		top: px-to-vw(872, 390);
-		width: px-to-vw(247, 390);
-		font-size: px-to-vw(14, 390);
-		line-height: normal;
+	.footerText {
+		font-size: px-to-vw(12, 390);
 	}
 }

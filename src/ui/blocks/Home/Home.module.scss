@@ -52,6 +52,11 @@
 	z-index: 60;
 }
 
+/* Додано правило для приховування верхньої лінії */
+.sectionSlot + .sectionSlot.noTopLine::before {
+	display: none;
+}
+
 @media screen and (max-width: $brakePointMobile) {
 	.canvas {
 		width: px-to-vw(370, 390);

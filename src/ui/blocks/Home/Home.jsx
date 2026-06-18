@@ -4,10 +4,12 @@ import HeroSection from "./sections/HeroSection";
 import StateIssueSection from "./sections/StateIssueSection";
 import FocusStateSection from "./sections/FocusStateSection";
 import HowSection from "./sections/HowSection";
+import TryFreeSection from "./sections/TryFreeSection";
 import AudienceSection from "./sections/AudienceSection";
 import TariffsSection from "./sections/TariffsSection";
 import ReviewsSection from "./sections/ReviewsSection";
 import AuthorSection from "./sections/AuthorSection";
+import FinalSection from "./sections/FinalSection";
 import FooterSection from "./sections/FooterSection";
 
 export default function Home() {
@@ -29,7 +31,12 @@ export default function Home() {
 				<div className={classes.sectionSlot}>
 					<HowSection />
 				</div>
-				<div className={classes.sectionSlot}>
+				{/* Без лінії над TryFree */}
+				<div className={`${classes.sectionSlot} ${classes.noTopLine}`}>
+					<TryFreeSection />
+				</div>
+				{/* Без глобальної лінії над Audience (бо лінія тепер всередині TryFree) */}
+				<div className={`${classes.sectionSlot} ${classes.noTopLine}`}>
 					<AudienceSection />
 				</div>
 				<div className={classes.sectionSlot}>
@@ -40,6 +47,9 @@ export default function Home() {
 				</div>
 				<div className={classes.sectionSlot}>
 					<AuthorSection />
+				</div>
+				<div className={classes.sectionSlot}>
+					<FinalSection />
 				</div>
 				<div className={classes.sectionSlot}>
 					<FooterSection />

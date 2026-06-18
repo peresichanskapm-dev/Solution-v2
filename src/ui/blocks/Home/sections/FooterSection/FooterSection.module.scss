@@ -26,7 +26,7 @@
 	grid-template-areas:
 		"project author"
 		"audience tariffs";
-		column-gap: px-to-vw(86, 1440);
+	column-gap: px-to-vw(86, 1440);
 	row-gap: px-to-vw(3, 1440);
 }
 
@@ -89,25 +89,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-}
-
-.footerMiddle::before,
-.footerMiddle::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	width: 100vw;
-	transform: translateX(-50%);
-	border-top: 1px solid #000;
-	pointer-events: none;
-}
-
-.footerMiddle::before {
-	top: 0;
-}
-
-.footerMiddle::after {
-	top: 100%;
 }
 
 .footerCopy {

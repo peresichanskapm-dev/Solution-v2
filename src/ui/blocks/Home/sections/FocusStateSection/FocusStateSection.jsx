@@ -50,7 +50,48 @@ export default function FocusStateSection() {
 			</div>
 			<div className={classes.focusShade} />
 
-			<p className={classes.focusStatement}>Саме цю точку ми втрачаємо. І саме її повертає SOLUTION.</p>
+			{/* Декоративна спіраль (тільки мобільна версія) */}
+			<div className={classes.focusDecorMobileWrap} aria-hidden="true">
+				<Image
+					src="/media/home/focusMobileDecor.svg"
+					alt=""
+					fill
+					className={classes.focusDecorMobile}
+				/>
+			</div>
+
+			{/* Текст для десктопу */}
+			<div className={`${classes.textContent} ${classes.desktopText}`}>
+				<p className={classes.smallText}>
+					Цей цикл не зупиняється через розуміння
+					<br />
+					Його можна тільки завершити опинившись в<br />
+					точці <b>до</b> реакції.
+				</p>
+				<h2 className={classes.largeText}>
+					Base Mode повертає тебе в<br />
+					цю точку.
+				</h2>
+			</div>
+
+			{/* Текст для мобайлу з точними переносами */}
+			<div className={`${classes.textContent} ${classes.mobileText}`}>
+				<p className={classes.smallText}>
+					Цей цикл не зупиняється через
+					<br />
+					розуміння
+					<br />
+					Його можна тільки завершити
+					<br />
+					опинившись в точці <b>до</b> реакції.
+				</p>
+				<h2 className={classes.largeText}>
+					Base Mode
+					<br />
+					повертає тебе в<br />
+					цю точку.
+				</h2>
+			</div>
 
 			<div className={classes.focusCard}>
 				<div

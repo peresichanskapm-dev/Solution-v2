@@ -19,27 +19,56 @@
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
 }
 
-.focusStatement {
+.desktopText {
+	display: block;
+}
+
+.mobileText {
+	display: none;
+}
+
+.focusDecorMobileWrap {
+	display: none;
+}
+
+.textContent {
 	position: relative;
 	z-index: 2;
-	width: px-to-vw(576, 1440);
-	margin: px-to-vw(352, 1440) auto 0;
+	width: px-to-vw(800, 1440);
+	margin: px-to-vw(280, 1440) auto 0;
 	text-align: center;
-	font-family: var(--font-tenor);
-	font-size: px-to-vw(40, 1440);
-	font-weight: 400;
-	line-height: 1.08;
-	letter-spacing: px-to-vw(-1.2, 1440);
 	color: #f5f5f5;
+}
+
+.smallText {
+	font-family: var(--font-inter);
+	font-size: px-to-vw(16, 1440);
+	font-weight: 300;
+	line-height: 1.5;
+	margin: 0 0 px-to-vw(20, 1440) 0;
+	opacity: 0.8;
+}
+
+.smallText b {
+	font-weight: 500;
+}
+
+.largeText {
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(45, 1440);
+	font-weight: 400;
+	line-height: 1.15;
+	letter-spacing: px-to-vw(-1.35, 1440);
+	margin: 0;
 }
 
 .focusCard {
 	position: relative;
 	z-index: 2;
 	width: px-to-vw(345, 1440);
-	margin-top: px-to-vw(112, 1440);
+	margin-top: px-to-vw(60, 1440);
 	margin-left: auto;
-	margin-right: px-to-vw(521, 1440);
+	margin-right: auto;
 }
 
 .focusCardImage {
@@ -91,17 +120,51 @@
 		min-height: px-to-vw(612, 390);
 	}
 
-	.focusStatement {
-		width: px-to-vw(212, 390);
-		margin-top: px-to-vw(231, 390);
+	.desktopText {
+		display: none !important;
+	}
+
+	.mobileText {
+		display: block !important;
+	}
+
+	.focusDecorMobileWrap {
+		display: block;
+		position: absolute;
+		top: px-to-vw(40, 390);
+		left: 50%;
+		transform: translateX(-50%);
+		width: px-to-vw(330, 390);
+		height: px-to-vw(420, 390);
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	.focusDecorMobile {
+		object-fit: contain;
+		object-position: center top;
+	}
+
+	.textContent {
+		width: px-to-vw(340, 390);
+		margin-top: px-to-vw(160, 390);
+	}
+
+	.smallText {
+		font-size: px-to-vw(14, 390);
+		margin-bottom: px-to-vw(15, 390);
+		line-height: 1.4;
+	}
+
+	.largeText {
 		font-size: px-to-vw(25, 390);
-		line-height: 1.08;
 		letter-spacing: px-to-vw(-0.75, 390);
+		line-height: 1.15;
 	}
 
 	.focusCard {
 		width: px-to-vw(295, 390);
-		margin: px-to-vw(72, 390) auto 0;
+		margin: px-to-vw(40, 390) auto 0;
 	}
 
 	.focusCardImage {

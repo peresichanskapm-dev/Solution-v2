@@ -1,84 +1,61 @@
 ﻿.tariffs {
 	position: relative;
-	min-height: px-to-vw(972, 1440);
 	background: #dfddd3;
-	overflow: hidden;
-	color: #191919;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: px-to-vw(140, 1440) 0 px-to-vw(120, 1440);
+	color: #000;
 }
 
-.tariffsMeta {
-	position: absolute;
-	left: px-to-vw(629, 1440);
-	top: px-to-vw(32, 1440);
-	width: px-to-vw(182, 1440);
-	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 400;
-	line-height: 1.2;
-	color: #838366;
-	opacity: 0.8;
+.header {
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.tariffsTitle {
-	position: absolute;
-	left: px-to-vw(542, 1440);
-	top: px-to-vw(64, 1440);
-	width: px-to-vw(356, 1440);
+.title {
 	font-family: var(--font-tenor);
-	font-size: px-to-vw(40, 1440);
+	font-size: px-to-vw(45, 1440);
 	font-weight: 400;
-	line-height: 1.075;
-	letter-spacing: px-to-vw(-1.2, 1440);
-	text-align: center;
+	line-height: 1.15;
+	letter-spacing: px-to-vw(-1.35, 1440);
+	margin: 0 0 px-to-vw(25, 1440) 0;
 }
 
-.tariffsLead {
-	position: absolute;
-	left: px-to-vw(536, 1440);
-	top: px-to-vw(166, 1440);
-	width: px-to-vw(368, 1440);
+.subtitle {
 	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 400;
-	line-height: 1.2;
+	font-size: px-to-vw(18, 1440);
+	font-weight: 300;
+	line-height: 1.4;
 	opacity: 0.8;
-	text-align: center;
+	margin: 0;
+	width: px-to-vw(820, 1440);
 }
 
-.programs {
-	position: relative;
-	z-index: 2;
+.programsGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: px-to-vw(40, 1440);
+	width: 100%;
+	max-width: px-to-vw(1160, 1440);
+	margin-top: px-to-vw(70, 1440);
+	padding-inline: px-to-vw(40, 1440);
 }
 
 .programCard {
-	position: absolute;
-}
-
-.programCardOne {
-	left: px-to-vw(70, 1440);
-	top: px-to-vw(244, 1440);
-}
-
-.programCardTwo {
-	left: px-to-vw(520, 1440);
-	top: px-to-vw(244, 1440);
-}
-
-.programCardThree {
-	left: px-to-vw(970, 1440);
-	top: px-to-vw(244, 1440);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .programImageWrap {
 	position: relative;
-}
-
-.programImageWrapOne,
-.programImageWrapTwo,
-.programImageWrapThree {
-	width: px-to-vw(400, 1440);
-	height: px-to-vw(400, 1440);
+	width: px-to-vw(330, 1440);
+	height: px-to-vw(330, 1440);
+	border-radius: 50%;
+	margin-bottom: px-to-vw(30, 1440);
 }
 
 .programImage {
@@ -87,170 +64,142 @@
 
 .programIndex {
 	position: absolute;
+	bottom: px-to-vw(25, 1440);
 	left: 50%;
 	transform: translateX(-50%);
-	top: px-to-vw(343, 1440);
 	font-family: var(--font-tenor);
-	font-size: px-to-vw(40, 1440);
-	font-weight: 400;
-	line-height: 1;
-	color: #191919;
-}
-
-.programName {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: px-to-vw(425, 1440);
-	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 400;
-	line-height: 1.2;
-	text-align: center;
-	color: #191919;
-}
-
-.programNameOne {
-	width: px-to-vw(208, 1440);
-}
-
-.programNameTwo {
-	width: px-to-vw(209, 1440);
-}
-
-.programNameThree {
-	width: px-to-vw(152, 1440);
-}
-
-.tariffsPrice {
-	position: absolute;
-	left: px-to-vw(676, 1440);
-	top: px-to-vw(767, 1440);
-	width: px-to-vw(88, 1440);
-	font-family: var(--font-inter);
 	font-size: px-to-vw(22, 1440);
-	font-weight: 400;
-	line-height: 1.2;
-	letter-spacing: px-to-vw(-0.44, 1440);
-	text-align: center;
-	color: #191919;
+	color: #fff;
+	z-index: 2;
 }
 
-.tariffsButton {
-	position: absolute;
-	left: px-to-vw(635, 1440);
-	top: px-to-vw(807, 1440);
-	width: px-to-vw(171, 1440);
-	height: px-to-vw(39, 1440);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: px-to-vw(10, 1440) px-to-vw(15, 1440);
-	border: 0;
-	border-radius: px-to-vw(40, 1440);
-	background: #838366;
+.programText {
 	font-family: var(--font-inter);
 	font-size: px-to-vw(16, 1440);
 	font-weight: 400;
-	line-height: normal;
-	letter-spacing: px-to-vw(-0.32, 1440);
+	line-height: 1.4;
+	text-align: center;
+	margin: 0;
+	opacity: 0.9;
+}
+
+.dailyStories {
+	margin-top: px-to-vw(90, 1440);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.dailyTitle {
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(40, 1440);
+	font-weight: 400;
+	letter-spacing: px-to-vw(-1.2, 1440);
+	margin: 0 0 px-to-vw(20, 1440) 0;
+}
+
+.dailyText {
+	font-family: var(--font-inter);
+	font-size: px-to-vw(16, 1440);
+	font-weight: 300;
+	line-height: 1.4;
+	opacity: 0.8;
+	margin: 0;
+}
+
+.price {
+	margin-top: px-to-vw(45, 1440);
+	font-family: var(--font-inter);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 400;
+	margin-bottom: px-to-vw(25, 1440);
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: px-to-vw(15, 1440) px-to-vw(45, 1440);
+	min-width: px-to-vw(320, 1440);
+	height: px-to-vw(45, 1440);
+	border-radius: px-to-vw(40, 1440);
+	border: 0;
+	background: #838366;
+	font-family: var(--font-inter);
+	font-size: px-to-vw(14, 1440);
+	font-weight: 400;
 	text-transform: uppercase;
 	color: #f5f5f5;
 	cursor: pointer;
-	white-space: nowrap;
+	transition: opacity 0.3s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
 }
 
 @media screen and (max-width: $brakePointMobile) {
 	.tariffs {
-		min-height: px-to-vw(1471, 390);
+		padding: px-to-vw(80, 390) 0 px-to-vw(100, 390);
 	}
 
-	.tariffsMeta {
-		left: px-to-vw(132, 390);
-		top: px-to-vw(70, 390);
-		width: px-to-vw(127, 390);
+	.title {
+		font-size: px-to-vw(28, 390);
+		margin-bottom: px-to-vw(15, 390);
+		letter-spacing: px-to-vw(-0.84, 390);
+	}
+
+	.subtitle {
 		font-size: px-to-vw(14, 390);
-		line-height: 1.2;
+		width: px-to-vw(340, 390);
 	}
 
-	.tariffsTitle {
-		left: px-to-vw(71, 390);
-		top: px-to-vw(102, 390);
-		width: px-to-vw(248, 390);
-		font-size: px-to-vw(25, 390);
-		line-height: 1.08;
-		letter-spacing: px-to-vw(-0.75, 390);
+	.programsGrid {
+		grid-template-columns: 1fr;
+		gap: px-to-vw(50, 390);
+		margin-top: px-to-vw(60, 390);
+		padding-inline: px-to-vw(25, 390);
 	}
 
-	.tariffsLead {
-		left: px-to-vw(76, 390);
-		top: px-to-vw(171, 390);
-		width: px-to-vw(239, 390);
-		font-size: px-to-vw(14, 390);
-		line-height: 1.2;
-	}
-
-	.programCardOne {
-		left: px-to-vw(49, 390);
-		top: px-to-vw(351, 390);
-	}
-
-	.programCardTwo {
-		left: px-to-vw(49, 390);
-		top: px-to-vw(707, 390);
-	}
-
-	.programCardThree {
-		left: px-to-vw(49, 390);
-		top: px-to-vw(1080, 390);
-	}
-
-	.programImageWrapOne,
-	.programImageWrapThree {
-		width: px-to-vw(292, 390);
-		height: px-to-vw(292, 390);
-	}
-
-	.programImageWrapTwo {
-		width: px-to-vw(291.5244, 390);
-		height: px-to-vw(291.5244, 390);
+	.programImageWrap {
+		width: px-to-vw(280, 390);
+		height: px-to-vw(280, 390);
+		margin-bottom: px-to-vw(20, 390);
 	}
 
 	.programIndex {
-		top: px-to-vw(255, 390);
-		font-size: px-to-vw(22, 390);
+		bottom: px-to-vw(20, 390);
+		font-size: px-to-vw(20, 390);
 	}
 
-	.programName {
-		top: px-to-vw(304, 390);
+	.programText {
 		font-size: px-to-vw(14, 390);
-		line-height: 1.2;
 	}
 
-	.programNameOne {
-		width: px-to-vw(239, 390);
+	.dailyStories {
+		margin-top: px-to-vw(70, 390);
+		padding-inline: px-to-vw(25, 390);
 	}
 
-	.programNameTwo,
-	.programNameThree {
-		width: px-to-vw(180, 390);
+	.dailyTitle {
+		font-size: px-to-vw(28, 390);
+		margin-bottom: px-to-vw(15, 390);
 	}
 
-	.tariffsPrice {
-		left: px-to-vw(151, 390);
-		top: px-to-vw(235, 390);
-		width: px-to-vw(88, 390);
-		font-size: px-to-vw(22, 390);
-		letter-spacing: px-to-vw(-0.44, 390);
-	}
-
-	.tariffsButton {
-		left: px-to-vw(118, 390);
-		top: px-to-vw(274, 390);
-		width: px-to-vw(154, 390);
-		height: px-to-vw(37, 390);
-		border-radius: px-to-vw(40, 390);
+	.dailyText {
 		font-size: px-to-vw(14, 390);
-		letter-spacing: px-to-vw(-0.28, 390);
+	}
+
+	.price {
+		margin-top: px-to-vw(35, 390);
+		font-size: px-to-vw(18, 390);
+		margin-bottom: px-to-vw(20, 390);
+	}
+
+	.button {
+		min-width: px-to-vw(260, 390);
+		height: px-to-vw(45, 390);
+		font-size: px-to-vw(12, 390);
 	}
 }

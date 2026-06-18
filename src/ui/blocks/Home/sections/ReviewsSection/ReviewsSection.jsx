@@ -159,9 +159,9 @@ export default function ReviewsSection() {
 				</div>
 
 				<h2 className={classes.reviewsSliderTitle}>
-					Що відчувають
+					Що змінюється
 					<br />
-					після SOLUTION
+					після Base Mode
 				</h2>
 
 				<button type="button" className={`${classes.reviewsArrow} ${classes.reviewsArrowLeft}`} onClick={() => handleSlideChange(-1)} aria-label="Попередній відгук">

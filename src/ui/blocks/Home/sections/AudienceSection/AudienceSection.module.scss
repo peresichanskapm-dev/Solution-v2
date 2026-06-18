@@ -50,13 +50,15 @@
 .audienceTitle {
 	position: absolute;
 	z-index: 3;
-	left: px-to-vw(550, 1440);
+	left: 50%;
+	transform: translateX(-50%);
 	top: px-to-vw(110, 1440);
-	width: px-to-vw(291, 1440);
+	width: max-content;
+	text-align: center;
 	font-family: var(--font-tenor);
 	font-size: px-to-vw(40, 1440);
 	font-weight: 400;
-	line-height: 1.075;
+	line-height: 1.15;
 	letter-spacing: px-to-vw(-1.2, 1440);
 	text-transform: none;
 }
@@ -73,31 +75,31 @@
 .audienceItemOne {
 	left: px-to-vw(231, 1440);
 	top: px-to-vw(245, 1440);
-	width: px-to-vw(190, 1440);
+	width: max-content;
 }
 
 .audienceItemTwo {
 	left: px-to-vw(536, 1440);
 	top: px-to-vw(361, 1440);
-	width: px-to-vw(190, 1440);
+	width: max-content;
 }
 
 .audienceItemThree {
 	left: px-to-vw(942, 1440);
 	top: px-to-vw(361, 1440);
-	width: px-to-vw(276, 1440);
+	width: max-content;
 }
 
 .audienceItemFour {
 	left: px-to-vw(326, 1440);
 	top: px-to-vw(589, 1440);
-	width: px-to-vw(190, 1440);
+	width: max-content;
 }
 
 .audienceItemFive {
 	left: px-to-vw(856, 1440);
 	top: px-to-vw(589, 1440);
-	width: px-to-vw(246, 1440);
+	width: max-content;
 }
 
 .audienceLineTopLeft,
@@ -283,9 +285,9 @@
 		top: px-to-vw(70, 390);
 		transform: translateX(-50%);
 		margin-left: 0;
-		width: px-to-vw(179, 390);
+		width: max-content;
 		font-size: px-to-vw(25, 390);
-		line-height: 1.08;
+		line-height: 1.15;
 		letter-spacing: px-to-vw(-0.75, 390);
 		text-align: center;
 	}
@@ -298,30 +300,30 @@
 	.audienceItemOne {
 		left: px-to-vw(25, 390);
 		top: px-to-vw(166, 390);
-		width: px-to-vw(114, 390);
+		width: max-content;
 	}
 
 	.audienceItemTwo {
 		left: px-to-vw(199, 390);
 		top: px-to-vw(246, 390);
-		width: px-to-vw(165, 390);
+		width: max-content;
 	}
 
 	.audienceItemThree {
 		left: px-to-vw(25, 390);
 		top: px-to-vw(381, 390);
-		width: px-to-vw(185, 390);
+		width: max-content;
 	}
 
 	.audienceItemFour {
 		left: px-to-vw(199, 390);
 		top: px-to-vw(580, 390);
-		width: px-to-vw(190, 390);
+		width: max-content;
 	}
 
 	.audienceItemFive {
 		left: px-to-vw(199, 390);
 		top: px-to-vw(466, 390);
-		width: px-to-vw(119, 390);
+		width: max-content;
 	}
 }

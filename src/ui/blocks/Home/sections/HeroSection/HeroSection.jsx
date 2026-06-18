@@ -7,14 +7,27 @@ export default function HeroSection() {
 			<div className={classes.heroLeft}>
 				<div className={classes.heroRing} />
 				<div className={classes.heroCopy}>
-					<p className={classes.heroTitle}>State Shift Audio Programs by SOLUTION</p>
-					<p className={classes.heroSubtitle}>М’яке психо-духовне перезавантаження стану за 5-12 хвилин</p>
+					<p className={classes.heroTitle}>
+						Ти знаєш, що
+						<br />
+						відбувається.
+						<br />
+						Але в моменті
+						<span className={classes.desktopDash}> —</span>
+						<br className={classes.mobileBreak} />
+						<span className={classes.mobileDash}>—</span>
+						<br />
+						дієш на автоматі
+					</p>
 					<button type="button" className={classes.heroButton}>
-						Спробувати
+						Спробувати безкоштовно
 					</button>
+					<p className={classes.heroSubtitle}>
+						Перший зсув — вже після
+						<br />
+						першого прослуховування
+					</p>
 				</div>
-				<p className={classes.heroTagLeft}>не релаксація.</p>
-				<p className={classes.heroTagRight}>не медитація.</p>
 			</div>
 
 			<div className={classes.heroRight}>
@@ -28,7 +41,10 @@ export default function HeroSection() {
 						className={classes.heroImage}
 					/>
 				</div>
-				<p className={classes.heroText}>Аудіопрограми, що змінюють стан через тіло, увагу і сприйняття. Думай чистіше. Відчувай глибше. Дій впевненіше.</p>
+				<p className={classes.heroText}>
+					Аудіопрограми, що змінюють стан через тіло, увагу і сприйняття. Думай чистіше.
+					Відчувай глибше. Дій впевненіше.
+				</p>
 			</div>
 		</section>
 	);

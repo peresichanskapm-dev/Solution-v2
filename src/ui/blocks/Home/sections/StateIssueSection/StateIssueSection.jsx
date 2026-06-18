@@ -4,19 +4,35 @@ import classes from "./StateIssueSection.module.scss";
 export default function StateIssueSection() {
 	return (
 		<section className={classes.stateIssue}>
-			<div className={classes.issueText}>
-				<h2 className={classes.sectionTitle}>Чому ми втрачаємо стан</h2>
-				<p className={classes.issueParagraph}>
-					Більшість людей живуть не зі свого центру, а з автоматичних реакцій.
+			<div className={classes.topText}>
+				<h2 className={classes.topTitle}>Чому стан не змінюється</h2>
+				<p className={classes.topParagraph}>
+					Ти виходиш з розмови — але вона ще годину в голові.
 					<br />
-					<br />З дитинства — чужі очікування і страхи. Згодом — шум, швидкість, перевантаження.
+					Одне повідомлення без відповіді — і ти три години у думках.
 					<br />
-					<br />В результаті:
+					Ловиш себе на реакції і розумієш: не хотів так.
 				</p>
 			</div>
 
 			<div className={classes.issueDiagram} aria-hidden="true">
-				<Image src="/media/home/StateIssueBackground.png" alt="" width={561} height={561} className={classes.issueDiagramImage} />
+				<Image
+					src="/media/home/StateIssueBackground.png"
+					alt=""
+					width={561}
+					height={561}
+					className={classes.issueDiagramImage}
+				/>
+			</div>
+
+			<div className={classes.bottomText}>
+				<h2 className={classes.bottomTitle}>
+					Але це знову відбувається, бо ти в моменті не там
+				</h2>
+				<p className={classes.bottomParagraph}>
+					Думка виникає і за долю секунди стає фактом, твоїм станом
+					<br />І вже з цього стану — дії, слова та рішення.
+				</p>
 			</div>
 		</section>
 	);
