@@ -104,10 +104,12 @@
 
 .desktopText {
 	display: inline;
+	font-weight: 400;
 }
 
 .mobileText {
 	display: none;
+	font-weight: 400;
 }
 
 .dailyText {
@@ -119,16 +121,22 @@
 	margin: 0;
 }
 
+.price {
+	font-family: var(--font-inter);
+	font-size: px-to-vw(20, 1440);
+	font-weight: 400;
+	/* Відступ над ціною та під нею */
+	margin: px-to-vw(35, 1440) 0 px-to-vw(20, 1440);
+}
+
 .button {
-	margin-top: px-to-vw(45, 1440);
-	margin-bottom: px-to-vw(20, 1440);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: px-to-vw(15, 1440) px-to-vw(45, 1440);
-	min-width: px-to-vw(320, 1440);
+	/* Зроблено кнопку широкою як на фото */
+	width: px-to-vw(540, 1440);
 	height: px-to-vw(45, 1440);
-	border-radius: px-to-vw(40, 1440);
+	border-radius: px-to-vw(100, 1440);
 	border: 0;
 	background: #838366;
 	font-family: var(--font-inter);
@@ -142,13 +150,6 @@
 	&:hover {
 		opacity: 0.8;
 	}
-}
-
-.price {
-	font-family: var(--font-inter);
-	font-size: px-to-vw(20, 1440);
-	font-weight: 400;
-	margin: 0;
 }
 
 @media screen and (max-width: $brakePointMobile) {
@@ -172,7 +173,7 @@
 
 	.subtitle {
 		font-size: px-to-vw(14, 390);
-		width: px-to-vw(340, 390);
+		width: px-to-vw(233, 390);
 	}
 
 	.programsGrid {
@@ -212,17 +213,16 @@
 		line-height: 1.35;
 	}
 
-	.button {
-		margin-top: px-to-vw(30, 390); /* Відступ над кнопкою */
-		margin-bottom: px-to-vw(15, 390); /* Відступ під кнопкою перед ціною */
-		min-width: px-to-vw(210, 390); /* Компактна ширина як на макеті */
-		padding: 0 px-to-vw(20, 390);
-		height: px-to-vw(42, 390);
-		font-size: px-to-vw(12, 390);
-	}
-
 	.price {
 		font-size: px-to-vw(20, 390);
-		margin: 0;
+		/* Пропорційні відступи для мобільної версії */
+		margin: px-to-vw(35, 390) 0 px-to-vw(15, 390);
+	}
+
+	.button {
+		/* Широка кнопка для мобільних */
+		width: px-to-vw(340, 390);
+		height: px-to-vw(46, 390);
+		font-size: px-to-vw(13, 390);
 	}
 }

@@ -3,6 +3,9 @@ import classes from "./TryFreeSection.module.scss";
 export default function TryFreeSection() {
 	return (
 		<section className={classes.tryFree}>
+			{/* Лінія тепер логічно перша і зафіксована зверху через CSS */}
+			<div className={classes.fullLine} />
+
 			<h2 className={classes.title}>
 				{/* Текст для десктопу */}
 				<span className={classes.desktopText}>
@@ -25,12 +28,6 @@ export default function TryFreeSection() {
 			<button type="button" className={classes.button}>
 				Спробуйте на безкоштовній практиці
 			</button>
-
-			<div className={classes.metaWrapper}>
-				<p className={classes.metaText}>5 хвилин</p>
-			</div>
-
-			<div className={classes.fullLine} />
 		</section>
 	);
 }

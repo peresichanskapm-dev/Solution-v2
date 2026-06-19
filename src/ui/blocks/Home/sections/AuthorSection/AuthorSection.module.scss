@@ -108,7 +108,7 @@
 }
 
 .authorRole {
-	font-family: var(--font-inter);
+	font-family: var(--font-tenor);
 	font-size: px-to-vw(18, 1440);
 	font-weight: 400;
 	color: #6a695d;
@@ -126,7 +126,7 @@
 }
 
 .textRegular {
-	font-family: var(--font-inter);
+	font-family: var(--font-tenor);
 	font-size: px-to-vw(16, 1440);
 	font-weight: 300;
 	line-height: 1.4;
@@ -137,6 +137,7 @@
 
 .desktopText {
 	display: inline;
+	font-family: var(--font-tenor);
 }
 
 .mobileText {
@@ -145,7 +146,7 @@
 
 .quoteBox {
 	position: relative;
-	width: px-to-vw(498, 1440);
+	width: px-to-vw(500, 1440);
 	height: px-to-vw(115, 1440);
 	margin-bottom: px-to-vw(45, 1440);
 	margin-left: px-to-vw(30, 1440);
@@ -166,14 +167,16 @@
 .quoteText {
 	position: relative;
 	z-index: 2;
-	font-family: var(--font-inter);
-	font-size: px-to-vw(15, 1440);
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(17, 1440);
 	font-weight: 400;
 	color: #000;
 	line-height: 1.4;
 	margin: 0;
 	text-align: left;
 	opacity: 0.9;
+	top: px-to-vw(-10, 1440);
+	left: px-to-vw(5, 1440);
 }
 
 .footerTextWrap {

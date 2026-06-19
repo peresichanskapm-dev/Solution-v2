@@ -9,7 +9,8 @@
   align-items: center;
   justify-content: flex-start;
   padding-top: px-to-vw(120, 1440);
-  padding-bottom: px-to-vw(60, 1440);
+  /* Зменшили нижній відступ, щоб під кнопкою було рівно стільки місця, скільки треба */
+  padding-bottom: px-to-vw(80, 1440);
   text-align: center;
 }
 
@@ -48,7 +49,7 @@
   padding: 0 px-to-vw(40, 1440);
   min-width: px-to-vw(340, 1440);
   height: px-to-vw(50, 1440);
-  border-radius: px-to-vw(40, 1440);
+  border-radius: px-to-vw(100, 1440);
   border: 0;
   background: #838366;
   font-family: var(--font-inter);
@@ -57,7 +58,8 @@
   text-transform: uppercase;
   color: #f5f5f5;
   cursor: pointer;
-  margin-bottom: px-to-vw(25, 1440);
+  /* Відступ під кнопкою прибрано, бо його тепер контролює padding секції .tryFree */
+  margin-bottom: 0;
   transition: opacity 0.3s ease;
 
   &:hover {
@@ -65,27 +67,13 @@
   }
 }
 
-.metaWrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: px-to-vw(45, 1440);
-}
-
-.metaText {
-  font-family: var(--font-inter);
-  font-size: px-to-vw(14, 1440);
-  font-weight: 300;
-  color: #000;
-  margin: 0;
-}
-
 .fullLine {
   width: 100vw;
   height: 1px;
   background-color: #000;
   position: absolute;
-  bottom: 140px;
+  /* Лінія тепер зафіксована строго зверху */
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -101,48 +89,29 @@
   }
 
   .tryFree {
-    /* Зменшено висоту блоку (відступи зверху і знизу) */
     padding-top: px-to-vw(50, 390);
-    padding-bottom: px-to-vw(35, 390);
+    /* Акуратний невеликий відступ під кнопкою для мобільної версії */
+    padding-bottom: px-to-vw(45, 390);
   }
 
   .title {
     font-size: px-to-vw(23, 390);
-    /* Забираємо жорстку ширину, щоб працювали наші <br> */
     width: 100%;
     padding: 0 px-to-vw(15, 390);
     letter-spacing: px-to-vw(-0.84, 390);
-    /* Зменшено відступ після заголовка */
     margin-bottom: px-to-vw(15, 390);
   }
 
   .subtitle {
     font-size: px-to-vw(14, 390);
-    /* Зменшено відступ після підзаголовка */
     margin-bottom: px-to-vw(25, 390);
   }
 
   .button {
     padding: 0 px-to-vw(25, 390);
-    /* Кнопка трохи ширша, як на макеті */
     min-width: px-to-vw(320, 390);
     height: px-to-vw(46, 390);
     font-size: px-to-vw(13, 390);
-    /* Зменшено відступ після кнопки */
-    margin-bottom: px-to-vw(15, 390);
-  }
-
-  .metaWrapper {
-    /* Зменшено відступ під текстом "5 хвилин" */
-    margin-bottom: px-to-vw(15, 390);
-  }
-
-  .metaText {
-    font-size: px-to-vw(14, 390);
-  }
-
-  .fullLine {
-    bottom: auto;
-    top: 0;
+    margin-bottom: 0;
   }
 }

@@ -152,8 +152,8 @@ export default function AuthorSection() {
 						/>
 						<p className={classes.quoteText}>
 							<span className={classes.desktopText}>
-								“ SOLUTION — це інтеграція цього досвіду: поєднання науки, практики
-								і глибшого розуміння людини. ”
+								“ SOLUTION — це система, яку я зібрала навколо цієї точки. Не щоб
+								пояснити, як усе влаштовано, а щоб допомогти туди потрапити. ”
 							</span>
 							<span className={classes.mobileText}>
 								“ SOLUTION — це інтеграція цього досвіду:

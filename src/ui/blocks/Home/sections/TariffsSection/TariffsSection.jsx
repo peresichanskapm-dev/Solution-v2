@@ -28,9 +28,7 @@ export default function TariffsSection() {
 					точка вибору
 				</h2>
 				<p className={classes.subtitle}>
-					Без паузи між думкою та реакцією будь-яка робота над собою — лише
-					<br />
-					спроба виправити скоєне. Base Mode змінює момент старту твоєї реакції.
+					Без паузи між думкою та реакцією будь-яка робота над собою — лише спроба виправити скоєне. Base Mode змінює момент старту твоєї реакції.
 				</p>
 			</div>
 
@@ -69,7 +67,7 @@ export default function TariffsSection() {
 						момент, який у житті зазвичай пропускаєш.
 					</span>
 
-					{/* Текст для мобільних (4 рядки, як у Figma) */}
+					{/* Текст для мобільних (4 рядки) */}
 					<span className={classes.mobileText}>
 						короткі щоденні практики у<br />
 						форматі живих ситуацій. Ти
@@ -81,11 +79,11 @@ export default function TariffsSection() {
 				</p>
 			</div>
 
+			<p className={classes.price}>999 ГРН</p>
+
 			<button type="button" className={classes.button}>
 				Придбати пакет
 			</button>
-
-			<p className={classes.price}>999 ГРН</p>
 		</section>
 	);
 }
