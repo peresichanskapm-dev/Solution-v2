@@ -5,6 +5,23 @@ export default function AuthorSection() {
 	return (
 		<section id="author" className={classes.author}>
 			<div className={classes.authorWrap}>
+				{/* ШАПКА ДЛЯ МОБІЛЬНИХ (На десктопі прихована) */}
+				<div className={classes.mobileHeader}>
+					<div className={classes.authorHead}>
+						<div className={classes.authorIconWrap} aria-hidden="true">
+							<Image
+								src="/media/home/authorNameIcon.png"
+								alt=""
+								fill
+								sizes="(max-width: 768px) 18px, 27px"
+								className={classes.authorIcon}
+							/>
+						</div>
+						<h2 className={classes.authorName}>Олена Третяк</h2>
+					</div>
+					<p className={classes.authorRole}>автор методології SOLUTION</p>
+				</div>
+
 				{/* Ліва колонка: Фотографія та декоративні елементи */}
 				<div className={classes.visuals}>
 					{/* Desktop visuals */}
@@ -92,20 +109,22 @@ export default function AuthorSection() {
 
 				{/* Права колонка: Текстовий контент */}
 				<div className={classes.content}>
-					<div className={classes.authorHead}>
-						<div className={classes.authorIconWrap} aria-hidden="true">
-							<Image
-								src="/media/home/authorNameIcon.png"
-								alt=""
-								fill
-								sizes="(max-width: 768px) 18px, 27px"
-								className={classes.authorIcon}
-							/>
+					{/* ШАПКА ДЛЯ ДЕСКТОПУ (На мобільних прихована) */}
+					<div className={classes.desktopHeader}>
+						<div className={classes.authorHead}>
+							<div className={classes.authorIconWrap} aria-hidden="true">
+								<Image
+									src="/media/home/authorNameIcon.png"
+									alt=""
+									fill
+									sizes="(max-width: 768px) 18px, 27px"
+									className={classes.authorIcon}
+								/>
+							</div>
+							<h2 className={classes.authorName}>Олена Третяк</h2>
 						</div>
-						<h2 className={classes.authorName}>Олена Третяк</h2>
+						<p className={classes.authorRole}>автор методології SOLUTION</p>
 					</div>
-
-					<p className={classes.authorRole}>автор методології SOLUTION</p>
 
 					<p className={classes.textBold}>
 						Я чудово розуміла свої паттерни, але в моменті це не допомагало: я просто
@@ -132,17 +151,37 @@ export default function AuthorSection() {
 							className={`${classes.quoteBg} ${classes.quoteBgMobile}`}
 						/>
 						<p className={classes.quoteText}>
-							SOLUTION — це система, яку я зібрала навколо цієї точки. Не щоб
-							пояснити, як усе влаштовано, а щоб допомогти туди потрапити.
+							<span className={classes.desktopText}>
+								“ SOLUTION — це інтеграція цього досвіду: поєднання науки, практики
+								і глибшого розуміння людини. ”
+							</span>
+							<span className={classes.mobileText}>
+								“ SOLUTION — це інтеграція цього досвіду:
+								<br />
+								поєднання науки, практики і глибшого
+								<br />
+								розуміння людини. ”
+							</span>
 						</p>
 					</div>
 
 					<div className={classes.footerTextWrap}>
 						<p className={classes.footerText}>
-							Між думкою та реакцією є спалах —<br />
-							момент, коротший за секунду. Якщо ти
-							<br />
-							присутній там, ти керуєш собою.
+							<span className={classes.desktopText}>
+								Між думкою та реакцією є спалах —<br />
+								момент, коротший за секунду. Якщо ти
+								<br />
+								присутній там, ти керуєш собою.
+							</span>
+							<span className={classes.mobileText}>
+								Між думкою та реакцією є спалах
+								<br />
+								— момент, коротший за секунду.
+								<br />
+								Якщо ти присутній там, ти керуєш
+								<br />
+								собою.
+							</span>
 						</p>
 					</div>
 				</div>

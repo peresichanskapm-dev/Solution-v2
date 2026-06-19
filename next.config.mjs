@@ -5,12 +5,6 @@ const nextConfig = {
 		removeConsole:
 			process.env.NODE_ENV === "production" ? { exclude: ["error", "warn"] } : false,
 	},
-	sassOptions: {
-		additionalData: `
-      @import "@/styles/variables.scss";
-      @import "@/styles/mixins.scss";
-    `,
-	},
 };
 
 export default nextConfig;

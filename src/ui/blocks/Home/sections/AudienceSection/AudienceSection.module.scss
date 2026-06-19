@@ -1,3 +1,6 @@
+@use "@/styles/variables.scss" as *;
+@use "@/styles/mixins.scss" as *;
+
 .audience {
 	position: relative;
 	min-height: px-to-vw(1014, 1440);
@@ -13,6 +16,7 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 }
 
 .audienceBackgroundImage {
@@ -174,7 +178,8 @@
 
 @media screen and (max-width: $brakePointMobile) {
 	.audience {
-		min-height: px-to-vw(871, 390);
+		/* Було 871, тепер 769 - щоб збігалося з висотою фону нижче */
+		min-height: px-to-vw(769, 390);
 	}
 
 	.audienceBackground,

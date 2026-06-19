@@ -1,3 +1,6 @@
+@use "@/styles/variables.scss" as *;
+@use "@/styles/mixins.scss" as *;
+
 .focusState {
 	position: relative;
 	min-height: px-to-vw(891, 1440);
@@ -19,15 +22,32 @@
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
 }
 
+.focusDecorDesktopWrap {
+	display: block;
+	position: absolute;
+	top: px-to-vw(150, 1440);
+	left: 50%;
+	transform: translateX(-50%);
+	width: px-to-vw(800, 1440);
+	height: px-to-vw(600, 1440);
+	z-index: 1;
+	pointer-events: none;
+}
+
+.focusDecorDesktop {
+	object-fit: contain;
+	object-position: center top;
+}
+
+.focusDecorMobileWrap {
+	display: none;
+}
+
 .desktopText {
 	display: block;
 }
 
 .mobileText {
-	display: none;
-}
-
-.focusDecorMobileWrap {
 	display: none;
 }
 
@@ -116,6 +136,10 @@
 }
 
 @media screen and (max-width: $brakePointMobile) {
+	.focusDecorDesktopWrap {
+		display: none !important;
+	}
+
 	.focusState {
 		min-height: px-to-vw(612, 390);
 	}

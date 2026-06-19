@@ -37,14 +37,14 @@ export default function FinalSection() {
 				</button>
 
 				<button type="button" className={classes.secondaryButton}>
-					( Спробувати безкоштовно )
+					{"{ Спробувати безкоштовно }"}
 				</button>
 			</div>
 
 			<p className={classes.bottomLeftText}>
-				Перший зсув — уже після
+				Перший зсув — уже
 				<br />
-				першого
+				після першого
 				<br />
 				прослуховування
 			</p>

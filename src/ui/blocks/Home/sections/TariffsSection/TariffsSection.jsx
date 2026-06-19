@@ -5,7 +5,6 @@ const programs = [
 	{
 		id: "I",
 		text: "Ти починаєш помічати момент,\nде думка стає реакцією",
-		// Повернули старі назви файлів, поки ти не експортуєш нові кола з Фігми
 		image: "/media/home/programRecovery.png",
 	},
 	{
@@ -63,16 +62,30 @@ export default function TariffsSection() {
 			<div className={classes.dailyStories}>
 				<h3 className={classes.dailyTitle}>+ Daily Stories</h3>
 				<p className={classes.dailyText}>
-					короткі щоденні практики у форматі живих ситуацій. Ти тренуєш
-					<br />
-					момент, який у житті зазвичай пропускаєш.
+					{/* Текст для десктопу */}
+					<span className={classes.desktopText}>
+						короткі щоденні практики у форматі живих ситуацій. Ти тренуєш
+						<br />
+						момент, який у житті зазвичай пропускаєш.
+					</span>
+
+					{/* Текст для мобільних (4 рядки, як у Figma) */}
+					<span className={classes.mobileText}>
+						короткі щоденні практики у<br />
+						форматі живих ситуацій. Ти
+						<br />
+						тренуєш момент, який у житті
+						<br />
+						зазвичай пропускаєш.
+					</span>
 				</p>
 			</div>
 
-			<p className={classes.price}>999 ГРН</p>
 			<button type="button" className={classes.button}>
 				Придбати пакет
 			</button>
+
+			<p className={classes.price}>999 ГРН</p>
 		</section>
 	);
 }

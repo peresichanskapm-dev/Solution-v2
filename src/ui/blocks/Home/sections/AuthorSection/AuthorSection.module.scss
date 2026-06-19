@@ -1,3 +1,6 @@
+@use "@/styles/variables.scss" as *;
+@use "@/styles/mixins.scss" as *;
+
 .author {
 	position: relative;
 	background: #dfddd3;
@@ -15,6 +18,14 @@
 	justify-content: space-between;
 	gap: px-to-vw(40, 1440);
 	padding-inline: px-to-vw(70, 1440);
+}
+
+.mobileHeader {
+	display: none;
+}
+
+.desktopHeader {
+	display: block;
 }
 
 .visuals {
@@ -124,6 +135,14 @@
 	margin: 0 0 px-to-vw(40, 1440) 0;
 }
 
+.desktopText {
+	display: inline;
+}
+
+.mobileText {
+	display: none;
+}
+
 .quoteBox {
 	position: relative;
 	width: px-to-vw(498, 1440);
@@ -175,19 +194,39 @@
 }
 
 @media screen and (max-width: $brakePointMobile) {
+	.desktopText { display: none; }
+	.mobileText { display: inline; }
+
 	.author {
-		padding: px-to-vw(80, 390) 0;
+		/* Зменшено відступ знизу до наступного блоку */
+		padding: px-to-vw(80, 390) 0 px-to-vw(40, 390);
 	}
 
 	.authorWrap {
 		flex-direction: column;
 		padding-inline: px-to-vw(25, 390);
-		gap: px-to-vw(40, 390);
+		gap: 0;
+	}
+
+	.mobileHeader {
+		display: flex;
+		flex-direction: column;
+		/* Ім'я залишається зліва */
+		align-items: flex-start;
+		width: 100%;
+		/* Зменшено відступ до картинки */
+		margin-bottom: px-to-vw(20, 390);
+	}
+
+	.desktopHeader {
+		display: none;
 	}
 
 	.visuals {
 		width: px-to-vw(299, 390);
 		height: px-to-vw(299, 390);
+		/* Зменшено відступ після картинки до тексту */
+		margin: 0 auto px-to-vw(20, 390);
 	}
 
 	.decorOuterDesktop,
@@ -222,7 +261,11 @@
 	}
 
 	.authorHead {
+		/* Ім'я та іконка зліва */
+		justify-content: flex-start;
 		gap: px-to-vw(10, 390);
+		/* Збільшено відступ після імені */
+		margin-bottom: px-to-vw(15, 390);
 	}
 
 	.authorIconWrap {
@@ -237,42 +280,53 @@
 
 	.authorRole {
 		font-size: px-to-vw(14, 390);
-		margin: 0 0 px-to-vw(30, 390) 0;
-		margin-left: px-to-vw(28, 390);
+		margin: 0;
+		/* Роль по центру */
+		align-self: center;
+		text-align: center;
 	}
 
 	.textBold {
 		font-size: px-to-vw(15, 390);
 		margin: 0 0 px-to-vw(20, 390) 0;
+		/* Текст зліва */
+		text-align: left;
 	}
 
 	.textRegular {
 		font-size: px-to-vw(14, 390);
-		margin: 0 0 px-to-vw(30, 390) 0;
+		margin: 0 0 px-to-vw(25, 390) 0;
+		/* Текст зліва */
+		text-align: left;
 	}
 
 	.quoteBox {
-		width: px-to-vw(301, 390);
+		/* Зменшений пазл */
+		width: 100%;
+		max-width: px-to-vw(290, 390);
 		height: px-to-vw(88, 390);
-		margin-left: 0;
-		margin-bottom: px-to-vw(30, 390);
-		padding: px-to-vw(15, 390) px-to-vw(20, 390);
-		align-self: center;
+		/* Зміщено вправо (margin-left: auto) */
+		margin: 0 0 px-to-vw(40, 390) auto;
+		padding: px-to-vw(12, 390) px-to-vw(20, 390);
 	}
 
 	.quoteBgDesktop { display: none; }
 	.quoteBgMobile { display: block; }
 
 	.quoteText {
-		font-size: px-to-vw(12, 390);
-		top: px-to-vw(-5, 390);
+		font-size: px-to-vw(11, 390);
+		top: px-to-vw(-2, 390);
+		/* Текст у пазлі зліва */
+		text-align: left;
+		width: 100%;
 	}
 
 	.footerTextWrap {
-		justify-content: flex-start;
+		justify-content: flex-end;
 	}
 
 	.footerText {
-		font-size: px-to-vw(12, 390);
+		font-size: px-to-vw(13, 390);
+		text-align: right;
 	}
 }

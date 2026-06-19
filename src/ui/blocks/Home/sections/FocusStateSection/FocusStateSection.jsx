@@ -44,13 +44,24 @@ export default function FocusStateSection() {
 					src="/media/home/lossBackground.png"
 					alt="Ocean shore"
 					fill
-					sizes="(max-width: 768px) 100vw, 96vw"
+					sizes="100vw"
 					className={classes.focusImage}
 				/>
 			</div>
+
 			<div className={classes.focusShade} />
 
-			{/* Декоративна спіраль (тільки мобільна версія) */}
+			{/* Декоративна спіраль (Десктопна версія) */}
+			<div className={classes.focusDecorDesktopWrap} aria-hidden="true">
+				<Image
+					src="/media/home/focusDesktopDecor.svg"
+					alt=""
+					fill
+					className={classes.focusDecorDesktop}
+				/>
+			</div>
+
+			{/* Декоративна спіраль (Мобільна версія) */}
 			<div className={classes.focusDecorMobileWrap} aria-hidden="true">
 				<Image
 					src="/media/home/focusMobileDecor.svg"

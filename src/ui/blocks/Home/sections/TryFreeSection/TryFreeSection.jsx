@@ -4,9 +4,21 @@ export default function TryFreeSection() {
 	return (
 		<section className={classes.tryFree}>
 			<h2 className={classes.title}>
-				Після цього в тих самих ситуаціях - інші
-				<br />
-				рішення, бо ти не в середині реакції.
+				{/* Текст для десктопу */}
+				<span className={classes.desktopText}>
+					Після цього в тих самих ситуаціях - інші
+					<br />
+					рішення, бо ти не в середині реакції.
+				</span>
+
+				{/* Текст для мобільних (з жорсткими переносами як у Figma) */}
+				<span className={classes.mobileText}>
+					Після цього в тих самих
+					<br />
+					ситуаціях - інші рішення, бо
+					<br />
+					ти не в середині реакції.
+				</span>
 			</h2>
 			<p className={classes.subtitle}>Це не те, що можна зрозуміти читаючи.</p>
 
@@ -18,7 +30,6 @@ export default function TryFreeSection() {
 				<p className={classes.metaText}>5 хвилин</p>
 			</div>
 
-			{/* Повноцінна лінія, що йде відразу під текстом */}
 			<div className={classes.fullLine} />
 		</section>
 	);
