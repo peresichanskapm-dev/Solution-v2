@@ -51,37 +51,17 @@ export default function FocusStateSection() {
 
 			<div className={classes.focusShade} />
 
-			{/* Декоративна спіраль (Десктопна версія) */}
-			<div className={classes.focusDecorDesktopWrap} aria-hidden="true">
-				<Image
-					src="/media/home/focusDesktopDecor.svg"
-					alt=""
-					fill
-					className={classes.focusDecorDesktop}
-				/>
-			</div>
-
-			{/* Декоративна спіраль (Мобільна версія) */}
-			<div className={classes.focusDecorMobileWrap} aria-hidden="true">
-				<Image
-					src="/media/home/focusMobileDecor.svg"
-					alt=""
-					fill
-					className={classes.focusDecorMobile}
-				/>
-			</div>
-
 			{/* Текст для десктопу */}
 			<div className={`${classes.textContent} ${classes.desktopText}`}>
 				<p className={classes.smallText}>
 					Цей цикл не зупиняється через розуміння
 					<br />
 					Його можна тільки завершити опинившись в<br />
-					точці <b>до</b> реакції.
+					точці <b>до</b> реакції
 				</p>
 				<h2 className={classes.largeText}>
 					Base Mode повертає тебе в<br />
-					цю точку.
+					цю точку
 				</h2>
 			</div>
 
@@ -94,13 +74,13 @@ export default function FocusStateSection() {
 					<br />
 					Його можна тільки завершити
 					<br />
-					опинившись в точці <b>до</b> реакції.
+					опинившись в точці <b>до</b> реакції
 				</p>
 				<h2 className={classes.largeText}>
 					Base Mode
 					<br />
 					повертає тебе в<br />
-					цю точку.
+					цю точку
 				</h2>
 			</div>
 

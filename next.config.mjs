@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	output: "export",
+	images: {
+		unoptimized: true, // <--- Вимикаємо серверну оптимізацію
+	},
 	reactStrictMode: true,
 	compiler: {
 		removeConsole:

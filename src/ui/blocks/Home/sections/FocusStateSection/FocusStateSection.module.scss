@@ -22,27 +22,6 @@
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
 }
 
-.focusDecorDesktopWrap {
-	display: block;
-	position: absolute;
-	top: px-to-vw(150, 1440);
-	left: 50%;
-	transform: translateX(-50%);
-	width: px-to-vw(800, 1440);
-	height: px-to-vw(600, 1440);
-	z-index: 1;
-	pointer-events: none;
-}
-
-.focusDecorDesktop {
-	object-fit: contain;
-	object-position: center top;
-}
-
-.focusDecorMobileWrap {
-	display: none;
-}
-
 .desktopText {
 	display: block;
 }
@@ -136,10 +115,6 @@
 }
 
 @media screen and (max-width: $brakePointMobile) {
-	.focusDecorDesktopWrap {
-		display: none !important;
-	}
-
 	.focusState {
 		min-height: px-to-vw(612, 390);
 	}
@@ -150,23 +125,6 @@
 
 	.mobileText {
 		display: block !important;
-	}
-
-	.focusDecorMobileWrap {
-		display: block;
-		position: absolute;
-		top: px-to-vw(40, 390);
-		left: 50%;
-		transform: translateX(-50%);
-		width: px-to-vw(330, 390);
-		height: px-to-vw(420, 390);
-		z-index: 1;
-		pointer-events: none;
-	}
-
-	.focusDecorMobile {
-		object-fit: contain;
-		object-position: center top;
 	}
 
 	.textContent {

@@ -67,6 +67,14 @@
   }
 }
 
+.timeNote {
+  font-family: var(--font-inter);
+  font-size: px-to-vw(18, 1440);
+  font-weight: 300;
+  color: #333; // Темно-сірий колір, як на макеті
+  margin: px-to-vw(15, 1440) 0 0 0;
+}
+
 .fullLine {
   width: 100vw;
   height: 1px;
@@ -113,5 +121,10 @@
     height: px-to-vw(46, 390);
     font-size: px-to-vw(13, 390);
     margin-bottom: 0;
+  }
+
+  .timeNote {
+    font-size: px-to-vw(16, 390);
+    margin-top: px-to-vw(12, 390);
   }
 }

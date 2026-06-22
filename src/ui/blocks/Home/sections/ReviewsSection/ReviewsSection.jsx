@@ -115,12 +115,29 @@ export default function ReviewsSection() {
 		<section className={classes.reviews}>
 			<div className={classes.reviewsPreload} aria-hidden="true">
 				{criticalPreloadIndexes.map((index) => (
-					<Image key={reviewSlides[index].src} src={reviewSlides[index].src} alt="" width={1} height={1} priority loading="eager" quality={slideImageQuality} sizes="1px" className={classes.reviewsPreloadImage} />
+					<Image
+						key={reviewSlides[index].src}
+						src={reviewSlides[index].src}
+						alt=""
+						width={1}
+						height={1}
+						priority
+						loading="eager"
+						quality={slideImageQuality}
+						sizes="1px"
+						className={classes.reviewsPreloadImage}
+					/>
 				))}
 			</div>
 
 			<div className={classes.reviewsBackground}>
-				<Image src="/media/home/reviewsBackgroundDesktop.png" alt="Forest" fill sizes="(max-width: 768px) 100vw, 1388px" className={classes.reviewsBackgroundImage} />
+				<Image
+					src="/media/home/reviewsBackgroundDesktop.png"
+					alt="Forest"
+					fill
+					sizes="(max-width: 768px) 100vw, 1388px"
+					className={classes.reviewsBackgroundImage}
+				/>
 			</div>
 			<div className={classes.reviewsOverlay} />
 
@@ -164,21 +181,51 @@ export default function ReviewsSection() {
 					після Base Mode
 				</h2>
 
-				<button type="button" className={`${classes.reviewsArrow} ${classes.reviewsArrowLeft}`} onClick={() => handleSlideChange(-1)} aria-label="Попередній відгук">
-					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none" className={classes.reviewsArrowIcon}>
-						<path d="M9.70703 18.3535L0.707031 9.35352L9.70703 0.353516" stroke="#FFFEFB" />
+				<button
+					type="button"
+					className={`${classes.reviewsArrow} ${classes.reviewsArrowLeft}`}
+					onClick={() => handleSlideChange(-1)}
+					aria-label="Попередній відгук"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="11"
+						height="19"
+						viewBox="0 0 11 19"
+						fill="none"
+						className={classes.reviewsArrowIcon}
+					>
+						<path
+							d="M9.70703 18.3535L0.707031 9.35352L9.70703 0.353516"
+							stroke="#FFFEFB"
+						/>
 					</svg>
 				</button>
 
-				<button type="button" className={`${classes.reviewsArrow} ${classes.reviewsArrowRight}`} onClick={() => handleSlideChange(1)} aria-label="Наступний відгук">
-					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none" className={`${classes.reviewsArrowIcon} ${classes.reviewsArrowIconRight}`}>
-						<path d="M9.70703 18.3535L0.707031 9.35352L9.70703 0.353516" stroke="#FFFEFB" />
+				<button
+					type="button"
+					className={`${classes.reviewsArrow} ${classes.reviewsArrowRight}`}
+					onClick={() => handleSlideChange(1)}
+					aria-label="Наступний відгук"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="11"
+						height="19"
+						viewBox="0 0 11 19"
+						fill="none"
+						className={`${classes.reviewsArrowIcon} ${classes.reviewsArrowIconRight}`}
+					>
+						<path
+							d="M9.70703 18.3535L0.707031 9.35352L9.70703 0.353516"
+							stroke="#FFFEFB"
+						/>
 					</svg>
 				</button>
 			</div>
 
-			<p className={classes.reviewsQuoteLeft}>«Наче хтось прибрав шум.»</p>
-			<p className={classes.reviewsQuoteRight}>«Я знову відчуваю опору всередині.»</p>
+			<p className={classes.reviewsQuoteLeft}>«Наче хтось прибрав шум»</p>
+			<p className={classes.reviewsQuoteRight}>«Я знову відчуваю опору всередині»</p>
 		</section>
 	);
 }

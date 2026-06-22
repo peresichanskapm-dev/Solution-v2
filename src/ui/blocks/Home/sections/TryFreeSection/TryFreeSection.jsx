@@ -11,7 +11,7 @@ export default function TryFreeSection() {
 				<span className={classes.desktopText}>
 					Після цього в тих самих ситуаціях - інші
 					<br />
-					рішення, бо ти не в середині реакції.
+					рішення, бо ти не в середині реакції
 				</span>
 
 				{/* Текст для мобільних (з жорсткими переносами як у Figma) */}
@@ -20,14 +20,16 @@ export default function TryFreeSection() {
 					<br />
 					ситуаціях - інші рішення, бо
 					<br />
-					ти не в середині реакції.
+					ти не в середині реакції
 				</span>
 			</h2>
-			<p className={classes.subtitle}>Це не те, що можна зрозуміти читаючи.</p>
+			<p className={classes.subtitle}>Це не те, що можна зрозуміти читаючи</p>
 
 			<button type="button" className={classes.button}>
 				Спробуйте на безкоштовній практиці
 			</button>
+
+			<p className={classes.timeNote}>5 хвилин</p>
 		</section>
 	);
 }

@@ -200,7 +200,6 @@
 	line-height: normal;
 	color: #f5f5f5;
 	opacity: 0.8;
-	text-align: justify;
 	z-index: 3;
 }
 
@@ -261,16 +260,16 @@
 	.reviewsQuoteLeft,
 	.reviewsQuoteRight {
 		top: px-to-vw(462, 390);
-		font-size: px-to-vw(14, 390);
+		font-size: px-to-vw(16, 390); // Збільшено розмір шрифту (було 14)
 	}
 
 	.reviewsQuoteLeft {
 		left: px-to-vw(15, 390);
-		width: px-to-vw(102, 390);
+		width: px-to-vw(120, 390); // Трохи збільшено ширину для комфортного розташування більшого шрифту
 	}
 
 	.reviewsQuoteRight {
-		left: px-to-vw(227, 390);
-		width: px-to-vw(127, 390);
+		left: px-to-vw(215, 390); // Трохи скориговано позицію зліва
+		width: px-to-vw(160, 390); // Збільшено ширину для більшого шрифту
 	}
 }

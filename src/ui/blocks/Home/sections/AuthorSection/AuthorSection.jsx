@@ -17,7 +17,7 @@ export default function AuthorSection() {
 								className={classes.authorIcon}
 							/>
 						</div>
-						<h2 className={classes.authorName}>Олена Третяк</h2>
+						<h2 className={classes.authorName}>Олена Третьякова</h2>
 					</div>
 					<p className={classes.authorRole}>автор методології SOLUTION</p>
 				</div>
@@ -121,20 +121,20 @@ export default function AuthorSection() {
 									className={classes.authorIcon}
 								/>
 							</div>
-							<h2 className={classes.authorName}>Олена Третяк</h2>
+							<h2 className={classes.authorName}>Олена Третьякова</h2>
 						</div>
 						<p className={classes.authorRole}>автор методології SOLUTION</p>
 					</div>
 
 					<p className={classes.textBold}>
-						Я чудово розуміла свої паттерни, але в моменті це не допомагало: я просто
-						дивилася збоку, як знову дію на автоматі, і не могла себе зупинити.
+						"Я чудово розуміла свої паттерни, але в моменті це не допомагало: я просто
+						дивилася збоку, як знову дію на автоматі, і не могла себе зупинити"
 					</p>
 
 					<p className={classes.textRegular}>
 						Психологія зазвичай працює «після» реакції. Але змінити можна лише те, до
 						чого маєш доступ тут і зараз. Я шукала цей доступ 10 років у 40 країнах —
-						через терапію, тіло та дослідження свідомості.
+						через терапію, тіло та дослідження свідомості
 					</p>
 
 					<div className={classes.quoteBox}>
@@ -153,7 +153,7 @@ export default function AuthorSection() {
 						<p className={classes.quoteText}>
 							<span className={classes.desktopText}>
 								“ SOLUTION — це система, яку я зібрала навколо цієї точки. Не щоб
-								пояснити, як усе влаштовано, а щоб допомогти туди потрапити. ”
+								пояснити, як усе влаштовано, а щоб допомогти туди потрапити ”
 							</span>
 							<span className={classes.mobileText}>
 								“ SOLUTION — це інтеграція цього досвіду:
@@ -171,7 +171,7 @@ export default function AuthorSection() {
 								Між думкою та реакцією є спалах —<br />
 								момент, коротший за секунду. Якщо ти
 								<br />
-								присутній там, ти керуєш собою.
+								присутній там, ти керуєш собою
 							</span>
 							<span className={classes.mobileText}>
 								Між думкою та реакцією є спалах

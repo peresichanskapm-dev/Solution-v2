@@ -18,27 +18,26 @@ export default function FinalSection() {
 			<div className={classes.content}>
 				<p className={classes.subtitleTop}>
 					Ти впізнаєш це: усе розумієш, але в<br />
-					моменті — знову всередині реакції.
+					моменті — знову всередині реакції
 				</p>
 				<p className={classes.subtitleBottom}>
 					Секунда, де є вибір, існує. Просто зараз
 					<br />
-					тебе там немає.
+					тебе там немає
 				</p>
 
 				<h2 className={classes.title}>
 					Base Mode
 					<br />
-					повертає тебе туди.
+					повертає тебе туди
 				</h2>
 
-				<button type="button" className={classes.button}>
-					Отримати доступ
-				</button>
-
-				<button type="button" className={classes.secondaryButton}>
-					{"{ Спробувати безкоштовно }"}
-				</button>
+				<div className={classes.buttonWrapper}>
+					<button type="button" className={classes.button}>
+						Отримати доступ
+					</button>
+					<span className={classes.buttonCaption}>5 хвилин в день</span>
+				</div>
 			</div>
 
 			<p className={classes.bottomLeftText}>

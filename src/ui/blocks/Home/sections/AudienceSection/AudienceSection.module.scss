@@ -8,9 +8,7 @@
 	color: #f5f5f5;
 }
 
-.audienceBackground,
-.audienceOverlay,
-.audienceMask {
+.audienceBackground {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -26,29 +24,6 @@
 	max-width: none;
 	left: -9.96% !important;
 	top: 0 !important;
-}
-
-.audienceOverlay {
-	background: rgba(0, 0, 0, 0.35);
-	z-index: 1;
-}
-
-.audienceMask {
-	z-index: 2;
-	pointer-events: none;
-}
-
-.audienceMaskImage {
-	object-fit: cover;
-	object-position: center top;
-}
-
-.audienceOverlay::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(13, 13, 13, 0.02);
-	backdrop-filter: blur(px-to-vw(3.3, 1440));
 }
 
 .audienceTitle {
@@ -182,9 +157,7 @@
 		min-height: px-to-vw(769, 390);
 	}
 
-	.audienceBackground,
-	.audienceOverlay,
-	.audienceMask {
+	.audienceBackground {
 		height: px-to-vw(769, 390);
 	}
 
@@ -193,10 +166,6 @@
 		height: 108.83% !important;
 		left: -32.86% !important;
 		top: 0 !important;
-	}
-
-	.audienceOverlay::after {
-		backdrop-filter: blur(px-to-vw(3.3, 390));
 	}
 
 	.audienceLineTopLeft,

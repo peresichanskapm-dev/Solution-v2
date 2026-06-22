@@ -10,7 +10,7 @@ export default function HowSection() {
 				{/* Десктопний текст */}
 				<p className={`${classes.howLeadTop} ${classes.desktopText}`}>
 					Підхід Base Mode діє в момент де стан ще тільки формується. В основі — система
-					SOLUTION, який працює з реакцією, а не з її наслідками.
+					SOLUTION, який працює з реакцією, а не з її наслідками
 				</p>
 				{/* Мобільний текст */}
 				<p className={`${classes.howLeadTop} ${classes.mobileText}`}>
@@ -65,7 +65,7 @@ export default function HowSection() {
 						</h3>
 						<p className={classes.howText}>
 							Тіло реагує швидше ніж ти це усвідомлюєш. Під час прослуховування зникає
-							механізм, який утримує реакцію.
+							механізм, який утримує реакцію
 						</p>
 					</div>
 				</article>
@@ -130,7 +130,7 @@ export default function HowSection() {
 							</h3>
 							<p className={classes.howTextSmall}>
 								Коли тіло відпустило і увага в моменті — з'являється та секунда
-								вибору, яку ти раніше пропускав.
+								вибору, яку ти раніше пропускав
 							</p>
 						</div>
 					</article>
@@ -140,7 +140,7 @@ export default function HowSection() {
 			<p className={classes.howConclusionMobile}>
 				В основі — система SOLUTION, який
 				<br />
-				працює з реакцією, а не з її наслідками.
+				працює з реакцією, а не з її наслідками
 			</p>
 		</section>
 	);
