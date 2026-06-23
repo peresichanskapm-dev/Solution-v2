@@ -52,7 +52,7 @@
 	position: relative;
 	width: px-to-vw(561, 1440);
 	height: px-to-vw(561, 1440);
-	margin-bottom: px-to-vw(30, 1440);
+	margin-bottom: px-to-vw(-10, 1440);
 }
 
 .issueDiagramImage {
@@ -179,7 +179,7 @@
 	.issueDiagram {
 		width: px-to-vw(320, 390);
 		height: px-to-vw(320, 390);
-		margin-bottom: px-to-vw(30, 390);
+		margin-bottom: px-to-vw(0, 390);
 	}
 
 	.innerShape {

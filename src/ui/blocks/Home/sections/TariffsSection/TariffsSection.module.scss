@@ -48,19 +48,17 @@
 	padding-inline: px-to-vw(40, 1440);
 }
 
-/* --- АНІМАЦІЯ З ЗАТРИМКАМИ --- */
 .programCard {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	opacity: 0;
 	transform: translateX(-40px);
-	transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+	transition: opacity 0.8s ease, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 
-	/* Затримки для послідовної появи карток */
-	&:nth-child(1) { transition-delay: 0s; }
-	&:nth-child(2) { transition-delay: 0.25s; }
-	&:nth-child(3) { transition-delay: 0.5s; }
+	&:nth-child(1) { transition-delay: 0.5s; }
+	&:nth-child(2) { transition-delay: 1.0s; }
+	&:nth-child(3) { transition-delay: 1.5s; }
 }
 
 .programCard.animate {
@@ -105,6 +103,19 @@
 	font-weight: 300;
 	fill: #A1A19A;
 	letter-spacing: px-to-vw(1, 1440);
+}
+
+/* Стилі для римської цифри внизу кола */
+.programNumber {
+	position: absolute;
+	bottom: px-to-vw(10, 1440);
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: var(--font-tenor);
+	font-size: px-to-vw(36, 1440); // Збільшено вдвічі (з 18 до 36)
+	font-weight: 400;
+	color: #fff; // Змінено на білий колір
+	z-index: 4;
 }
 
 .programText {
@@ -215,10 +226,9 @@
 	.programCard {
 		transform: translateX(-20px);
 
-		/* На мобільному залишаємо менші затримки, щоб при скролі елементи не запізнювалися */
-		&:nth-child(1) { transition-delay: 0s; }
-		&:nth-child(2) { transition-delay: 0.15s; }
-		&:nth-child(3) { transition-delay: 0.3s; }
+		&:nth-child(1) { transition-delay: 0.4s; }
+		&:nth-child(2) { transition-delay: 0.8s; }
+		&:nth-child(3) { transition-delay: 1.2s; }
 	}
 
 	.programCard.animate {
@@ -238,6 +248,12 @@
 	.curveText {
 		font-size: px-to-vw(12, 390);
 		letter-spacing: px-to-vw(1, 390);
+	}
+
+	/* Адаптивність для цифри */
+	.programNumber {
+		bottom: px-to-vw(10, 390);
+		font-size: px-to-vw(32, 390); // Збільшено вдвічі (з 16 до 32)
 	}
 
 	.programText {

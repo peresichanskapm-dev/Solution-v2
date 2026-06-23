@@ -36,7 +36,6 @@ export default function FinalSection() {
 					<button type="button" className={classes.button}>
 						Отримати доступ
 					</button>
-					<span className={classes.buttonCaption}>5 хвилин в день</span>
 				</div>
 			</div>
 

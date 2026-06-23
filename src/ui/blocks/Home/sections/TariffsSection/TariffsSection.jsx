@@ -98,6 +98,9 @@ export default function TariffsSection() {
 									</textPath>
 								</text>
 							</svg>
+
+							{/* Номер програми (Римська цифра внизу) */}
+							<span className={classes.programNumber}>{program.id}</span>
 						</div>
 						<p className={classes.programText}>
 							{program.text.split("\n").map((line, i) => (
